@@ -143,10 +143,6 @@ select {
     border: none;
 }
 
-section {
-    padding: var(--section-padding) 0;
-}
-
 /*--- TYPOGRAPHY ---*/
 
 h1,
