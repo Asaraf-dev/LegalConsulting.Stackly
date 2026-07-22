@@ -1,0 +1,301 @@
+/*=========================================================
+    FOOTER
+=========================================================*/
+
+/*==================== FOOTER ====================*/
+
+.lc-footer {
+    position: relative;
+    background: var(--primary-color);
+    color: rgba(255, 255, 255, .75);
+    overflow: hidden;
+}
+
+/* Gold Top Line */
+
+.lc-footer-top-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--secondary-color),
+            transparent);
+}
+
+/*==================== MAIN FOOTER ====================*/
+
+.lc-footer .container {
+    padding: 100px 0 0;
+}
+
+.lc-footer-widget h4 {
+    color: var(--white-color);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.lc-footer-widget h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    height: 3px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+}
+
+/*==================== LOGO ====================*/
+
+.lc-footer-logo {
+    display: inline-block;
+    margin-bottom: 25px;
+    width: 250px;
+}
+
+/*==================== PARAGRAPH ====================*/
+
+.lc-footer-widget p {
+    color: rgba(255, 255, 255, .72);
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/*==================== LINKS ====================*/
+
+.lc-footer-widget ul {
+    margin: 0;
+    padding: 0;
+}
+
+.lc-footer-widget li {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.lc-footer-widget ul a {
+    position: relative;
+    color: rgba(255, 255, 255, .75);
+    transition: var(--transition);
+}
+
+.lc-footer-widget ul a::before {
+    content: "›";
+    color: var(--secondary-color);
+    margin-right: 8px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.lc-footer-widget ul a:hover {
+    color: var(--white-color);
+    padding-left: 8px;
+}
+
+.lc-footer-widget ul a:hover::before {
+    opacity: 1;
+}
+
+/*==================== CONTACT ====================*/
+
+.lc-footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.lc-footer-contact i {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+/*==================== SOCIAL ====================*/
+
+.lc-footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.lc-footer-social a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.lc-footer-social a:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+    transform: translateY(-5px);
+}
+
+/*==================== NEWSLETTER ====================*/
+
+.lc-newsletter {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.lc-newsletter h3 {
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+
+.lc-newsletter p {
+    color: rgba(255, 255, 255, .70);
+    margin: 0;
+}
+
+/*==================== FORM ====================*/
+
+.lc-newsletter-form {
+    display: flex;
+    gap: 15px;
+}
+
+.lc-newsletter-form input {
+    flex: 1;
+    height: 58px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, .08);
+    color: var(--white-color);
+    border-radius: 50px;
+    padding: 0 25px;
+}
+
+.lc-newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, .55);
+}
+
+.lc-newsletter-form button {
+    height: 58px;
+    border: none;
+    padding: 0 35px;
+    border-radius: 50px;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.lc-newsletter-form button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+/*==================== FOOTER BOTTOM ====================*/
+
+.lc-footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding: 20px 0;
+}
+
+.lc-footer-bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.lc-footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, .65);
+}
+
+.lc-footer-policy {
+    display: flex;
+    gap: 30px;
+}
+
+.lc-footer-policy a {
+    color: rgba(255, 255, 255, .70);
+    transition: var(--transition);
+}
+
+.lc-footer-policy a:hover {
+    color: var(--secondary-color);
+}
+
+.lc-footer-bottom .container{
+    padding: 0;
+}
+/*==================== RESPONSIVE ====================*/
+
+@media(max-width:991px) {
+
+    .lc-newsletter {
+        padding: 40px;
+    }
+
+    .lc-newsletter-form {
+        margin-top: 30px;
+    }
+
+    .lc-footer-bottom-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media(max-width:767px) {
+
+
+    .lc-newsletter {
+        padding: 30px;
+    }
+
+    .lc-newsletter-form {
+        flex-direction: column;
+    }
+
+    .lc-newsletter-form input,
+    .lc-newsletter-form button {
+        width: 100%;
+    }
+
+    .lc-footer-policy {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+     .lc-footer{
+        padding: 0 15px;
+    }
+
+    .lc-newsletter-form input{
+        padding: 20px;
+    }
+
+    .lc-footer-widget h4::after {
+        left: 10%;
+        transform: translateX(-50%);
+    }
+
+    .lc-footer-contact li {
+        gap: 0;
+        text-align: start;
+    }
+
+}
+
+@media (max-width:320px) {
+    .modal-title{
+        font-size: 20px !important;
+    }
+}

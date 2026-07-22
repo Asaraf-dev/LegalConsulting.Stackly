@@ -1,0 +1,552 @@
+/*--- SITE LOADER ---*/
+
+.site-loader {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top, #1E3A8A 0%, transparent 35%),
+        radial-gradient(circle at bottom, #B68D40 0%, transparent 30%),
+        linear-gradient(135deg, #0F172A 0%, #172554 100%);
+    z-index: 999999;
+    transition: opacity .8s ease,
+        visibility .8s ease,
+        transform .8s ease,
+        filter .8s ease;
+}
+
+/*--- BACKGROUND ---*/
+
+.loader-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .04), transparent 35%),
+        radial-gradient(circle at 70% 70%, rgba(182, 141, 64, .05), transparent 40%);
+}
+
+.loader-glow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(182, 141, 64, .22) 0%,
+            rgba(37, 99, 235, .12) 45%,
+            transparent 75%);
+    filter: blur(30px);
+}
+
+/*--- WRAPPER ---*/
+
+.loader-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/*--- LUXURY RING ---*/
+
+.loader-ring {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.loader-ring::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    border:2px solid rgba(182,141,64,.35);
+
+    animation:loaderRotate 12s linear infinite;
+}
+
+.loader-ring-inner{
+    position:absolute;
+    inset:18px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.08);
+
+    animation:loaderRotateReverse 8s linear infinite;
+}
+
+/*--- PARTICLES ---*/
+
+.loader-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(182, 141, 64, .7);
+}
+
+.loader-dot-1 {
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loader-dot-2 {
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loader-dot-3 {
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loader-dot-4 {
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*--- JUSTICE SCALE ---*/
+
+.loader-scale {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Top Ring */
+
+.loader-scale-hook {
+    width: 18px;
+    height: 18px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    margin-bottom: 4px;
+}
+
+/* Rod */
+
+.loader-scale-rod {
+    width: 4px;
+    height: 75px;
+    background: linear-gradient(to bottom,
+            #F5D77B,
+            var(--secondary-color));
+}
+
+/* Beam */
+
+.loader-scale-beam {
+    position: relative;
+    width: 130px;
+    height: 4px;
+    background: linear-gradient(to right,
+            #F5D77B,
+            var(--secondary-color),
+            #F5D77B);
+    border-radius: 20px;
+}
+
+/* Left & Right Arms */
+
+.loader-scale-left,
+.loader-scale-right {
+    position: absolute;
+    top: 4px;
+}
+
+.loader-scale-left {
+    left: 0;
+}
+
+.loader-scale-right {
+    right: 0;
+}
+
+/* Chains */
+
+.loader-chain {
+    display: block;
+    width: 2px;
+    height: 34px;
+    margin: auto;
+    background: var(--secondary-color);
+}
+
+/* Pans */
+
+.loader-pan {
+    display: block;
+    width: 38px;
+    height: 14px;
+    border: 2px solid var(--secondary-color);
+    border-top: none;
+    border-radius: 0 0 30px 30px;
+    margin-left: -18px;
+}
+
+/* Base */
+
+.loader-scale-base {
+    width: 90px;
+    height: 5px;
+    margin-top: 55px;
+    border-radius: 50px;
+    background: linear-gradient(to right,
+            #F5D77B,
+            var(--secondary-color),
+            #F5D77B);
+}
+
+/*--- BRAND ---*/
+
+.loader-brand {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.loader-brand h2 {
+    margin-bottom: 8px;
+    letter-spacing: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.loader-brand p {
+    margin: 0;
+    color: rgba(255, 255, 255, .75);
+    letter-spacing: 2px;
+}
+
+/*--- PROGRESS ---*/
+
+.loader-progress {
+    position: relative;
+    width: 220px;
+    height: 4px;
+    margin-top: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .08);
+}
+
+.loader-progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg,
+            #F5D77B,
+            var(--secondary-color),
+            #F5D77B);
+}
+
+/*--- LOADER ANIMATIONS ---*/
+
+
+@keyframes loaderRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/*--- SCALE SWING ---*/
+
+.loader-scale {
+    animation: loaderSwing 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes loaderSwing {
+
+    0%,
+    100% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+}
+
+/*--- GLOW ---*/
+
+.loader-glow {
+    animation: loaderGlow 4s ease-in-out infinite;
+}
+
+@keyframes loaderGlow {
+
+    0%,
+    100% {
+        transform: scale(.9);
+        opacity: .45;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: .85;
+    }
+
+}
+
+/*--- PARTICLES ---*/
+
+.loader-dot {
+    animation: loaderParticle 2s ease-in-out infinite;
+}
+
+.loader-dot-2 {
+    animation-delay: .3s;
+}
+
+.loader-dot-3 {
+    animation-delay: .6s;
+}
+
+.loader-dot-4 {
+    animation-delay: .9s;
+}
+
+@keyframes loaderParticle {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: .5;
+    }
+
+    50% {
+        transform: scale(1.8);
+        opacity: 1;
+    }
+
+}
+
+/*--- PROGRESS BAR ---*/
+
+
+@keyframes loaderProgress {
+
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+/*--- BRAND SHIMMER ---*/
+
+.loader-brand h2 {
+
+    background: linear-gradient(90deg,
+            #8B6B2E,
+            #F6D36A,
+            #FFF4C8,
+            #F6D36A,
+            #8B6B2E);
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+
+    animation: loaderShimmer 3s linear infinite;
+}
+
+@keyframes loaderShimmer {
+
+    from {
+
+        background-position: -250%;
+
+    }
+
+    to {
+
+        background-position: 250%;
+
+    }
+
+}
+
+/*--- TEXT ---*/
+
+.loader-brand p {
+
+    animation: loaderText 2s ease-in-out infinite;
+
+}
+
+@keyframes loaderText {
+
+    0%,
+    100% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+/*--- EXIT ---*/
+
+.site-loader-hide {
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none;
+
+    transform: scale(1.05);
+
+    filter: blur(10px);
+
+}
+
+/*--- RESPONSIVE ---*/
+
+@media (max-width:991.98px) {
+
+    .loader-ring {
+        width: 180px;
+        height: 180px;
+    }
+
+    .loader-progress {
+        width: 180px;
+    }
+
+    .loader-brand {
+        margin-top: 35px;
+    }
+
+}
+
+@media (max-width:767.98px) {
+
+    .loader-ring {
+        width: 150px;
+        height: 150px;
+    }
+
+    .loader-scale {
+        transform: scale(.8);
+    }
+
+    .loader-brand h2 {
+        letter-spacing: 3px;
+    }
+
+    .loader-progress {
+        width: 150px;
+    }
+
+}
+
+@media (max-width:575.98px) {
+
+    .loader-ring {
+        width: 130px;
+        height: 130px;
+    }
+
+    .loader-scale {
+        transform: scale(.65);
+    }
+
+    .loader-brand {
+        margin-top: 25px;
+    }
+
+    .loader-brand h2 {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .loader-brand p {
+        font-size: .9rem;
+    }
+
+    .loader-progress {
+        width: 130px;
+    }
+
+}
+
+/*--- REDUCED MOTION ---*/
+
+@media (prefers-reduced-motion:reduce) {
+
+    .loader-ring,
+    .loader-scale,
+    .loader-dot,
+    .loader-glow,
+    .loader-progress-bar,
+    .loader-brand h2,
+    .loader-brand p {
+
+        animation: none !important;
+
+    }
+
+}
+
+@keyframes loaderRotateReverse{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+
+}
+
+html.loading,
+body.loading {
+    overflow: hidden;
+}
+
+body.loading {
+    background: #0F172A;
+}
+
+html,
+body{
+    background:#0F172A;
+}
+
+.site-loader{
+    position:fixed;
+    inset:0;
+    z-index:9999999;
+}
