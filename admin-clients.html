@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Consulting | Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.webp">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.webp">
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.webp">
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.webp">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+
+    <!--- Admin Dashboard Start --->
+
+    <div class="dashboard-wrapper">
+
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo">
+                    <a href="index.html"> <img src="assets/images/barnd-logo-1.webp" alt="Brand-Logo"></a>
+                </div>
+
+            </div>
+
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a></li>
+                <li><a href="admin-cases.html"><i class="bi bi-folder-fill"></i><span>Cases</span></a></li>
+                <li><a href="admin-clients.html"><i class="bi bi-people-fill"></i><span>Clients</span></a></li>
+                <li><a href="admin-lawyers.html"><i class="bi bi-person-workspace"></i><span>Lawyers</span></a></li>
+                <li><a href="admin-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
+            </ul>
+
+            <div class="sidebar-logout">
+                <button id="logoutBtn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Logout
+                </button>
+            </div>
+
+        </aside>
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-topbar">
+
+                <div class="topbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <h4 id="pageTitle">Admin</h4>
+                </div>
+
+                <div class="topbar-right">
+
+                    <button class="topbar-icon">
+                        <i class="bi bi-bell-fill"></i>
+                    </button>
+
+                    <div class="topbar-profile">
+
+                        <div class="profile-avatar">
+                            <img src="assets/images/profile-2.webp" id="profileImage" alt="Admin">
+                        </div>
+
+                        <div class="profile-content">
+                            <h6 id="topUserName">Administrator</h6>
+                            <small id="topUserEmail">admin@email.com</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!--- Dashboard Content --->
+
+            <div class="dashboard-content">
+
+                <!--- Page Header --->
+
+                <div class="page-header">
+
+                    <div>
+
+                        <h2>
+
+                            Client Management
+
+                        </h2>
+
+                        <p>
+
+                            Manage all registered clients, assign lawyers and monitor their legal activities.
+
+                        </p>
+
+                    </div>
+
+                    <button class="btn btn-dark new-case-btn">
+
+                        <i class="bi bi-person-plus-fill me-2"></i>
+
+                        Add New Client
+
+                    </button>
+
+                </div>
+
+                <!--- Statistics --->
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-xl-3 col-lg-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon">
+
+                                <i class="bi bi-people-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Total Clients</span>
+
+                                <h3>248</h3>
+
+                                <small>
+
+                                    <i class="bi bi-arrow-up"></i>
+
+                                    12 New This Month
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon green">
+
+                                <i class="bi bi-person-check-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Active Clients</span>
+
+                                <h3>215</h3>
+
+                                <small>
+
+                                    86% Active
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon blue">
+
+                                <i class="bi bi-folder-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Open Cases</span>
+
+                                <h3>86</h3>
+
+                                <small>
+
+                                    14 Awaiting Hearing
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon orange">
+
+                                <i class="bi bi-award-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Success Rate</span>
+
+                                <h3>94%</h3>
+
+                                <small>
+
+                                    Case Resolution
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--- Search & Filter --->
+
+                <div class="dashboard-card mb-4">
+
+                    <div class="row g-3 align-items-center">
+
+                        <div class="col-xl-5">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-search"></i>
+
+                                </span>
+
+                                <input type="text" class="form-control"
+                                    placeholder="Search by Client Name, Email or Phone">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-2 col-md-4">
+
+                            <select class="form-select">
+
+                                <option selected>
+
+                                    Status
+
+                                </option>
+
+                                <option>
+
+                                    Active
+
+                                </option>
+
+                                <option>
+
+                                    Inactive
+
+                                </option>
+
+                                <option>
+
+                                    Pending
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-xl-2 col-md-4">
+
+                            <select class="form-select">
+
+                                <option selected>
+
+                                    Lawyer
+
+                                </option>
+
+                                <option>
+
+                                    David Wilson
+
+                                </option>
+
+                                <option>
+
+                                    Emma Thomas
+
+                                </option>
+
+                                <option>
+
+                                    James Walker
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-xl-2 col-md-4">
+
+                            <select class="form-select">
+
+                                <option selected>
+
+                                    Sort By
+
+                                </option>
+
+                                <option>
+
+                                    Newest
+
+                                </option>
+
+                                <option>
+
+                                    Oldest
+
+                                </option>
+
+                                <option>
+
+                                    A - Z
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-xl-1">
+
+                            <button class="btn btn-dark w-100">
+
+                                <i class="bi bi-funnel"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--- Client Cards --->
+
+                <div class="row g-4">
+
+                    <!-- Client Card -->
+
+                    <div class="col-xl-4 col-lg-6">
+
+                        <div class="client-card">
+
+                            <div class="client-card-top">
+
+                                <img src="assets/images/profile-1.webp" alt="Client">
+
+                                <span class="badge bg-success">
+
+                                    Active
+
+                                </span>
+
+                            </div>
+
+                            <div class="client-card-body">
+
+                                <h4>
+
+                                    John Anderson
+
+                                </h4>
+
+                                <p>
+
+                                    Client ID :
+                                    <strong>#CLI-1001</strong>
+
+                                </p>
+
+                                <ul class="client-info">
+
+                                    <li>
+
+                                        <i class="bi bi-envelope-fill"></i>
+
+                                        john@email.com
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-telephone-fill"></i>
+
+                                        +91 98765 43210
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-person-workspace"></i>
+
+                                        David Wilson
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-folder-fill"></i>
+
+                                        4 Active Cases
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="client-card-footer">
+
+                                <button class="btn btn-outline-dark">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                                <button class="btn btn-outline-primary">
+
+                                    <i class="bi bi-pencil"></i>
+
+                                </button>
+
+                                <button class="btn btn-outline-danger">
+
+                                    <i class="bi bi-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Client Card -->
+
+                    <div class="col-xl-4 col-lg-6">
+
+                        <div class="client-card">
+
+                            <div class="client-card-top">
+
+                                <img src="assets/images/profile-2.webp" alt="Client">
+
+                                <span class="badge bg-warning text-dark">
+
+                                    Pending
+
+                                </span>
+
+                            </div>
+
+                            <div class="client-card-body">
+
+                                <h4>
+
+                                    Sarah Williams
+
+                                </h4>
+
+                                <p>
+
+                                    Client ID :
+                                    <strong>#CLI-1002</strong>
+
+                                </p>
+
+                                <ul class="client-info">
+
+                                    <li>
+
+                                        <i class="bi bi-envelope-fill"></i>
+
+                                        sarah@email.com
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-telephone-fill"></i>
+
+                                        +91 98765 12345
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-person-workspace"></i>
+
+                                        Emma Thomas
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-folder-fill"></i>
+
+                                        2 Active Cases
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="client-card-footer">
+
+                                <button class="btn btn-outline-dark">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                                <button class="btn btn-outline-primary">
+
+                                    <i class="bi bi-pencil"></i>
+
+                                </button>
+
+                                <button class="btn btn-outline-danger">
+
+                                    <i class="bi bi-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Client Card -->
+
+                    <div class="col-xl-4 col-lg-6">
+
+                        <div class="client-card">
+
+                            <div class="client-card-top">
+
+                                <img src="assets/images/profile-3.webp" alt="Client">
+
+                                <span class="badge bg-primary">
+
+                                    Premium
+
+                                </span>
+
+                            </div>
+
+                            <div class="client-card-body">
+
+                                <h4>
+
+                                    Michael Brown
+
+                                </h4>
+
+                                <p>
+
+                                    Client ID :
+                                    <strong>#CLI-1003</strong>
+
+                                </p>
+
+                                <ul class="client-info">
+
+                                    <li>
+
+                                        <i class="bi bi-envelope-fill"></i>
+
+                                        michael@email.com
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-telephone-fill"></i>
+
+                                        +91 98765 55555
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-person-workspace"></i>
+
+                                        James Walker
+
+                                    </li>
+
+                                    <li>
+
+                                        <i class="bi bi-folder-fill"></i>
+
+                                        6 Active Cases
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="client-card-footer">
+
+                                <button class="btn btn-outline-dark">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                                <button class="btn btn-outline-primary">
+
+                                    <i class="bi bi-pencil"></i>
+
+                                </button>
+
+                                <button class="btn btn-outline-danger">
+
+                                    <i class="bi bi-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+
+                <nav class="mt-5">
+
+                    <ul class="pagination justify-content-end">
+
+                        <li class="page-item disabled">
+
+                            <a class="page-link" href="#">
+
+                                Previous
+
+                            </a>
+
+                        </li>
+
+                        <li class="page-item active">
+
+                            <a class="page-link" href="#">
+
+                                1
+
+                            </a>
+
+                        </li>
+
+                        <li class="page-item">
+
+                            <a class="page-link" href="#">
+
+                                2
+
+                            </a>
+
+                        </li>
+
+                        <li class="page-item">
+
+                            <a class="page-link" href="#">
+
+                                3
+
+                            </a>
+
+                        </li>
+
+                        <li class="page-item">
+
+                            <a class="page-link" href="#">
+
+                                Next
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+
+
+
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!--- Admin Dashboard End --->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -40,21 +40,63 @@ function initNavbar() {
 }
 
 
-function initStickyHeader(){
+function initStickyHeader() {
 
     const wrapper = document.querySelector(".lc-header-wrapper");
 
-    if(!wrapper) return;
+    if (!wrapper) return;
 
-    window.addEventListener("scroll",()=>{
+    window.addEventListener("scroll", () => {
 
-        if(window.scrollY > 60){
+        if (window.scrollY > 60) {
 
             wrapper.classList.add("header-scrolled");
 
-        }else{
+        } else {
 
             wrapper.classList.remove("header-scrolled");
+
+        }
+
+    });
+
+}
+
+/*====================
+Active Navigation
+====================*/
+
+function initActiveNavbar() {
+
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".lc-nav-menu a").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (href === currentPage) {
+
+            link.classList.add("active");
+
+        } else {
+
+            link.classList.remove("active");
+
+        }
+
+    });
+
+    document.querySelectorAll(".lc-mobile-nav a").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (href === currentPage) {
+
+            link.classList.add("active");
+
+        } else {
+
+            link.classList.remove("active");
 
         }
 

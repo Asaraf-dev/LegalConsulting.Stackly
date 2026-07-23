@@ -225,3 +225,161 @@ function initScrollReveal() {
     elements.forEach(item => observer.observe(item));
 
 }
+
+/*--- Hero Section ---*/
+
+const allHeroSection = document.querySelector(".all-hero-section");
+
+if (allHeroSection) {
+
+    /*====================
+    Scroll Reveal
+    ====================*/
+
+    const heroObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.2
+
+    });
+
+    heroObserver.observe(allHeroSection);
+
+    /*====================
+    Mouse Parallax
+    ====================*/
+
+    const heroCircle = document.querySelector(".all-hero-circle");
+    const heroCards = document.querySelectorAll(".all-hero-card");
+    const heroFloating = document.querySelectorAll(".all-hero-floating");
+
+    allHeroSection.addEventListener("mousemove", (e) => {
+
+        const rect = allHeroSection.getBoundingClientRect();
+
+        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+        const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
+
+        requestAnimationFrame(() => {
+
+            if (heroCircle) {
+
+                heroCircle.style.transform =
+                    `translate(${x}px, ${y}px)`;
+
+            }
+
+            heroCards.forEach((card, index) => {
+
+                const speed = (index + 1) * 0.5;
+
+                card.style.transform =
+                    `translate(${x * speed}px,${y * speed}px)`;
+
+            });
+
+            heroFloating.forEach((item, index) => {
+
+                const speed = (index + 2) * 0.4;
+
+                item.style.transform =
+                    `translate(${-x * speed}px,${-y * speed}px)`;
+
+            });
+
+        });
+
+    });
+
+    allHeroSection.addEventListener("mouseleave", () => {
+
+        if (heroCircle) {
+
+            heroCircle.style.transform = "translate(0,0)";
+
+        }
+
+        heroCards.forEach(card => {
+
+            card.style.transform = "translate(0,0)";
+
+        });
+
+        heroFloating.forEach(item => {
+
+            item.style.transform = "translate(0,0)";
+
+        });
+
+    });
+
+}
+
+/*--- All CTA ---*/
+
+const allCtaObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const section = entry.target;
+
+            section.querySelector(".all-cta-badge")?.classList.add("show");
+
+            setTimeout(() => {
+
+                section.querySelector(".all-cta-title")?.classList.add("show");
+
+            }, 150);
+
+            setTimeout(() => {
+
+                section.querySelector(".all-cta-description")?.classList.add("show");
+
+            }, 300);
+
+            setTimeout(() => {
+
+                section.querySelector(".all-cta-buttons")?.classList.add("show");
+
+            }, 450);
+
+            section.querySelectorAll(".all-cta-shape").forEach((shape, index) => {
+
+                setTimeout(() => {
+
+                    shape.classList.add("show");
+
+                }, 250 + (index * 100));
+
+            });
+
+            allCtaObserver.unobserve(section);
+
+        }
+
+    });
+
+}, {
+
+    threshold: .25
+
+});
+
+document.querySelectorAll(".all-cta-section").forEach(section => {
+
+    allCtaObserver.observe(section);
+
+});

@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Consulting | Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.webp">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.webp">
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.webp">
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.webp">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+
+    <!--- Admin Dashboard Start --->
+
+    <div class="dashboard-wrapper">
+
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo">
+                    <a href="index.html"> <img src="assets/images/barnd-logo-1.webp" alt="Brand-Logo"></a>
+                </div>
+
+            </div>
+
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a></li>
+                <li><a href="admin-cases.html"><i class="bi bi-folder-fill"></i><span>Cases</span></a></li>
+                <li><a href="admin-clients.html"><i class="bi bi-people-fill"></i><span>Clients</span></a></li>
+                <li><a href="admin-lawyers.html"><i class="bi bi-person-workspace"></i><span>Lawyers</span></a></li>
+                <li><a href="admin-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
+            </ul>
+
+            <div class="sidebar-logout">
+                <button id="logoutBtn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Logout
+                </button>
+            </div>
+
+        </aside>
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-topbar">
+
+                <div class="topbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <h4 id="pageTitle">Admin</h4>
+                </div>
+
+                <div class="topbar-right">
+
+                    <button class="topbar-icon">
+                        <i class="bi bi-bell-fill"></i>
+                    </button>
+
+                    <div class="topbar-profile">
+
+                        <div class="profile-avatar">
+                            <img src="assets/images/profile-2.webp" id="profileImage" alt="Admin">
+                        </div>
+
+                        <div class="profile-content">
+                            <h6 id="topUserName">Administrator</h6>
+                            <small id="topUserEmail">admin@email.com</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!--- Dashboard Content --->
+
+            <div class="dashboard-content">
+
+                <!--- Page Header --->
+
+                <div class="page-header">
+
+                    <div>
+
+                        <h2>
+
+                            Case Management
+
+                        </h2>
+
+                        <p>
+
+                            Create, assign and manage all legal cases from one place.
+
+                        </p>
+
+                    </div>
+
+                    <a href="404.html" class="btn btn-dark new-case-btn">
+
+                        <i class="bi bi-plus-circle me-2"></i>
+
+                        New Case
+
+                    </a>
+
+                </div>
+
+                <!--- Search & Filters --->
+
+                <div class="dashboard-card mb-4 h-auto">
+
+                    <div class="row g-3">
+
+                        <div class="col-lg-5">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-search"></i>
+
+                                </span>
+
+                                <input type="text" class="form-control"
+                                    placeholder="Search by Case ID, Client or Lawyer">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <select class="form-select">
+
+                                <option>Status</option>
+                                <option>Active</option>
+                                <option>Pending</option>
+                                <option>Closed</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <select class="form-select">
+
+                                <option>Category</option>
+                                <option>Criminal</option>
+                                <option>Civil</option>
+                                <option>Corporate</option>
+                                <option>Family</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-2">
+
+                            <select class="form-select">
+
+                                <option>Lawyer</option>
+                                <option>David Wilson</option>
+                                <option>Emma Thomas</option>
+                                <option>James Walker</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-lg-1 d-grid">
+
+                            <button class="btn btn-dark">
+
+                                <i class="bi bi-funnel"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--- Statistics --->
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon">
+
+                                <i class="bi bi-folder-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Total Cases</span>
+
+                                <h3>248</h3>
+
+                                <small>+18 This Month</small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon blue">
+
+                                <i class="bi bi-hourglass-split"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Pending</span>
+
+                                <h3>38</h3>
+
+                                <small class="text-primary">
+
+                                    Needs Review
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon green">
+
+                                <i class="bi bi-check-circle-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Closed</span>
+
+                                <h3>156</h3>
+
+                                <small class="text-success">
+
+                                    Completed
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="stats-card">
+
+                            <div class="stats-icon orange">
+
+                                <i class="bi bi-calendar-event-fill"></i>
+
+                            </div>
+
+                            <div class="stats-content">
+
+                                <span>Today's Hearings</span>
+
+                                <h3>12</h3>
+
+                                <small>
+
+                                    Scheduled
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--- Cases Table --->
+
+                <div class="dashboard-card h-auto">
+
+                    <div class="dashboard-card-header">
+
+                        <h4>
+
+                            All Cases
+
+                        </h4>
+
+                        <a href="404.html">
+
+                            Export
+
+                        </a>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table dashboard-table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Case ID</th>
+                                    <th>Client</th>
+                                    <th>Lawyer</th>
+                                    <th>Category</th>
+                                    <th>Progress</th>
+                                    <th>Status</th>
+                                    <th>Next Hearing</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>#LC-1001</strong>
+
+                                    </td>
+
+                                    <td>John Anderson</td>
+
+                                    <td>David Wilson</td>
+
+                                    <td>Civil</td>
+
+                                    <td width="180">
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-success" style="width:90%"></div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            Active
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>25 Jul 2026</td>
+
+                                    <td>
+
+                                      <a href="404.html">  <button class="btn btn-outline-secondary view-case-btn">
+
+                                            <i class="bi bi-eye"></i>
+
+                                        </button></a>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>#LC-1002</strong>
+
+                                    </td>
+
+                                    <td>Sarah Williams</td>
+
+                                    <td>Emma Thomas</td>
+
+                                    <td>Corporate</td>
+
+                                    <td>
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-warning" style="width:55%"></div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-warning text-dark">
+
+                                            Pending
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>28 Jul 2026</td>
+
+                                    <td>
+
+                                       <a href="404.html"> <button class="btn btn-outline-secondary view-case-btn">
+
+                                            <i class="bi bi-eye"></i>
+
+                                        </button></a>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>#LC-1003</strong>
+
+                                    </td>
+
+                                    <td>Michael Brown</td>
+
+                                    <td>James Walker</td>
+
+                                    <td>Criminal</td>
+
+                                    <td>
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-primary" style="width:72%"></div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-primary">
+
+                                            Hearing
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>30 Jul 2026</td>
+
+                                    <td>
+
+                                        <a href="404.html"><button class="btn btn-outline-secondary view-case-btn">
+
+                                            <i class="bi bi-eye"></i>
+
+                                        </button></a>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>#LC-1004</strong>
+
+                                    </td>
+
+                                    <td>Olivia Davis</td>
+
+                                    <td>David Wilson</td>
+
+                                    <td>Family</td>
+
+                                    <td>
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-info" style="width:80%"></div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-info">
+
+                                            Review
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>02 Aug 2026</td>
+
+                                    <td>
+
+                                       <a href="404.html"> <button class="btn btn-outline-secondary view-case-btn">
+
+                                            <i class="bi bi-eye"></i>
+
+                                        </button></a>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>#LC-1005</strong>
+
+                                    </td>
+
+                                    <td>Daniel Harris</td>
+
+                                    <td>Emma Thomas</td>
+
+                                    <td>Property</td>
+
+                                    <td>
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-danger" style="width:100%"></div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-secondary">
+
+                                            Closed
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>Completed</td>
+
+                                    <td>
+
+                                        <a href="404.html"><button class="btn btn-outline-secondary view-case-btn">
+
+                                            <i class="bi bi-eye"></i>
+
+                                        </button></a>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+
+                    </div>
+
+                    <!--- Mobile Cases --->
+
+                    <div class="case-mobile">
+
+                        <div class="case-card">
+
+                            <div class="case-card-header">
+
+                                <div>
+
+                                    <h5 class="case-card-title">
+
+                                        John Anderson
+
+                                    </h5>
+
+                                    <span class="case-card-id">
+
+                                        #LC-1001
+
+                                    </span>
+
+                                </div>
+
+                                <span class="badge bg-success">
+
+                                    Active
+
+                                </span>
+
+                            </div>
+
+                            <div class="case-card-info">
+
+                                <div>
+
+                                    <span>
+
+                                        Lawyer
+
+                                    </span>
+
+                                    <strong>
+
+                                        David Wilson
+
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+
+                                        Category
+
+                                    </span>
+
+                                    <strong>
+
+                                        Civil
+
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+
+                                        Progress
+
+                                    </span>
+
+                                    <strong>
+
+                                        90%
+
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+
+                                        Hearing
+
+                                    </span>
+
+                                    <strong>
+
+                                        25 Jul 2026
+
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                            <div class="case-card-footer">
+
+                                <span class="badge bg-primary">
+
+                                    In Progress
+
+                                </span>
+
+                              <a href="404.html">  <button class="btn btn-outline-dark btn-sm">
+
+                                    <i class="bi bi-eye me-2"></i>
+
+                                    View
+
+                                </button></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--- Case Details Modal --->
+
+                    <div class="modal fade" id="caseModal" tabindex="-1">
+
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+                                    <h5 class="modal-title">
+
+                                        Case Details
+
+                                    </h5>
+
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="row g-4">
+
+                                        <div class="col-md-6">
+
+                                            <strong>
+
+                                                Case ID
+
+                                            </strong>
+
+                                            <p>
+
+                                                #LC-1001
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <strong>
+
+                                                Client
+
+                                            </strong>
+
+                                            <p>
+
+                                                John Anderson
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <strong>
+
+                                                Lawyer
+
+                                            </strong>
+
+                                            <p>
+
+                                                David Wilson
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <strong>
+
+                                                Category
+
+                                            </strong>
+
+                                            <p>
+
+                                                Civil Case
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <strong>
+
+                                                Status
+
+                                            </strong>
+
+                                            <p>
+
+                                                <span class="badge bg-success">
+
+                                                    Active
+
+                                                </span>
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <strong>
+
+                                                Next Hearing
+
+                                            </strong>
+
+                                            <p>
+
+                                                25 July 2026
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="col-12">
+
+                                            <strong>
+
+                                                Case Description
+
+                                            </strong>
+
+                                            <p>
+
+                                                Civil property dispute currently under review. The next hearing has been
+                                                scheduled and all required legal documents have been submitted.
+
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="modal-footer">
+
+                                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+
+                                        Close
+
+                                    </button>
+
+                                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editCaseModal">
+
+                                        Edit Case
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--- Edit Case Modal --->
+
+                    <div class="modal fade" id="editCaseModal" tabindex="-1">
+
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+                                    <h5 class="modal-title">
+
+                                        Edit Case
+
+                                    </h5>
+
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="row g-3">
+
+                                        <div class="col-md-6">
+
+                                            <label class="form-label">
+
+                                                Client Name
+
+                                            </label>
+
+                                            <input type="text" class="form-control" value="John Anderson">
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <label class="form-label">
+
+                                                Lawyer
+
+                                            </label>
+
+                                            <select class="form-select">
+
+                                                <option selected>
+
+                                                    David Wilson
+
+                                                </option>
+
+                                                <option>
+
+                                                    Emma Thomas
+
+                                                </option>
+
+                                                <option>
+
+                                                    James Walker
+
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <label class="form-label">
+
+                                                Category
+
+                                            </label>
+
+                                            <select class="form-select">
+
+                                                <option selected>
+
+                                                    Civil
+
+                                                </option>
+
+                                                <option>
+
+                                                    Criminal
+
+                                                </option>
+
+                                                <option>
+
+                                                    Corporate
+
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <label class="form-label">
+
+                                                Status
+
+                                            </label>
+
+                                            <select class="form-select">
+
+                                                <option selected>
+
+                                                    Active
+
+                                                </option>
+
+                                                <option>
+
+                                                    Pending
+
+                                                </option>
+
+                                                <option>
+
+                                                    Closed
+
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                        <div class="col-12">
+
+                                            <label class="form-label">
+
+                                                Description
+
+                                            </label>
+
+                                            <textarea class="form-control"
+                                                rows="5">Civil property dispute currently under review.</textarea>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="modal-footer">
+
+                                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+
+                                        Cancel
+
+                                    </button>
+
+                                    <button class="btn btn-dark">
+
+                                        Save Changes
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <nav class="mt-4">
+
+                        <ul class="pagination justify-content-end">
+
+                            <li class="page-item disabled">
+
+                                <a class="page-link" href="404.html">
+
+                                    Previous
+
+                                </a>
+
+                            </li>
+
+                            <li class="page-item active">
+
+                                <a class="page-link">
+
+                                    1
+
+                                </a>
+
+                            </li>
+
+                            <li class="page-item">
+
+                                <a class="page-link" href="404.html">
+
+                                    2
+
+                                </a>
+
+                            </li>
+
+                            <li class="page-item">
+
+                                <a class="page-link" href="404.html">
+
+                                    3
+
+                                </a>
+
+                            </li>
+
+                            <li class="page-item">
+
+                                <a class="page-link" href="404.html">
+
+                                    Next
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!--- Admin Dashboard End --->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

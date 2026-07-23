@@ -10,14 +10,14 @@ async function loadComponent(id, file) {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    await loadComponent("navbar","assets/components/navbar.html");
+    await loadComponent("navbar", "assets/components/navbar.html");
 
-    await loadComponent("footer","assets/components/footer.html");
+    await loadComponent("footer", "assets/components/footer.html");
 
     initLoader();          // <-- Add this
-
     initNavbar();
     initStickyHeader();
+    initActiveNavbar();
     initFooter();
 
     document.dispatchEvent(

@@ -623,28 +623,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*--- CTA Reveal ---*/
 
-const ctaSection = document.querySelector(".ind-cta-section");
+/*--- CTA ---*/
 
-if (ctaSection) {
+const ctaObserver = new IntersectionObserver((entries) => {
 
-    const ctaObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
 
-        entries.forEach(entry => {
+        if (entry.isIntersecting) {
 
-            if (entry.isIntersecting) {
+            const section = entry.target;
 
-                ctaSection.classList.add("show");
+            section.querySelector(".cta-badge")?.classList.add("show");
 
-            }
+            setTimeout(() => {
 
-        });
+                section.querySelector(".cta-title")?.classList.add("show");
 
-    }, {
+            }, 150);
 
-        threshold: 0.2
+            setTimeout(() => {
+
+                section.querySelector(".cta-description")?.classList.add("show");
+
+            }, 350);
+
+            setTimeout(() => {
+
+                section.querySelector(".cta-buttons")?.classList.add("show");
+
+            }, 550);
+
+            const trustItems = section.querySelectorAll(".cta-trust-item");
+
+            trustItems.forEach((item, index) => {
+
+                setTimeout(() => {
+
+                    item.classList.add("show");
+
+                }, 750 + (index * 150));
+
+            });
+
+            ctaObserver.unobserve(section);
+
+        }
 
     });
 
-    ctaObserver.observe(ctaSection);
+}, {
 
-}
+    threshold: .25
+
+});
+
+document.querySelectorAll(".cta-section").forEach(section => {
+
+    ctaObserver.observe(section);
+
+});

@@ -1,0 +1,1571 @@
+/*--- Login Section ---*/
+
+.login-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #081320 0%, #0F172A 45%, #132238 100%);
+    overflow: hidden;
+}
+
+body {
+    padding-top: 0;
+}
+
+.login-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: .35;
+    pointer-events: none;
+}
+
+.login-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.login-bg-circle-1 {
+    width: 420px;
+    height: 420px;
+    top: -160px;
+    left: -120px;
+    background: rgba(182, 141, 64, .15);
+}
+
+.login-bg-circle-2 {
+    width: 500px;
+    height: 500px;
+    bottom: -220px;
+    right: -180px;
+    background: rgba(37, 99, 235, .12);
+}
+
+.login-floating {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, .08);
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+}
+
+.login-float-1 {
+    top: 12%;
+    left: 10%;
+}
+
+.login-float-2 {
+    top: 22%;
+    right: 12%;
+}
+
+.login-float-3 {
+    bottom: 14%;
+    left: 14%;
+}
+
+.login-card {
+    position: relative;
+    padding: 50px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 32px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .35);
+    overflow: hidden;
+}
+
+.login-logo {
+    width: 85px;
+    height: 85px;
+    margin: auto;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(182, 141, 64, .12);
+    border: 2px solid rgba(182, 141, 64, .25);
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.login-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background: rgba(182, 141, 64, .15);
+    color: var(--secondary-color);
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.login-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login-description {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: .98rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .75);
+}
+
+/*--- Role Cards ---*/
+
+.login-role-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.login-role-card {
+    padding: 25px;
+    text-align: center;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .05);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: .35s;
+}
+
+.login-role-card i {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.login-role-card h5 {
+    margin-bottom: 6px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.login-role-card small {
+    color: rgba(255, 255, 255, .65);
+}
+
+.login-role-card.active {
+    border-color: var(--secondary-color);
+}
+
+/*--- Form ---*/
+
+.login-group {
+    margin-bottom: 24px;
+}
+
+.login-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.login-input-box {
+    position: relative;
+}
+
+.login-input-box>i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #94A3B8;
+}
+
+.login-input-box input {
+    height: 60px;
+    padding-left: 55px;
+    padding-right: 55px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+.login-input-box input::placeholder {
+    color: rgba(255, 255, 255, .45);
+}
+
+.login-input-box input:focus {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.login-password-toggle {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.15rem;
+    color: #BFC8D6;
+}
+
+/*--- Password Strength ---*/
+
+.password-strength {
+    margin-bottom: 25px;
+}
+
+.password-strength-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, .08);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.password-strength-bar span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--secondary-color);
+    transition: .35s;
+}
+
+.password-rules {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.password-rules li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .7);
+}
+
+.password-rules li i {
+    font-size: .7rem;
+}
+
+/*--- Options ---*/
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.login-options .form-check-label {
+    color: #fff;
+}
+
+.login-options a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*--- Button ---*/
+
+.login-btn {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 18px;
+    background: var(--secondary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*--- Footer ---*/
+
+.login-footer {
+    margin-top: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, .7);
+}
+
+.login-footer a {
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/*--- Login Premium Effects ---*/
+
+.login-card {
+    position: relative;
+    transition: .45s ease;
+}
+
+.login-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .18), transparent);
+    transition: 1s;
+    pointer-events: none;
+}
+
+.login-card:hover::before {
+    left: 160%;
+}
+
+.login-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, .45);
+}
+
+/* Floating Icons */
+
+.login-floating {
+    animation: loginFloat 5s ease-in-out infinite;
+    transition: .35s;
+}
+
+.login-float-2 {
+    animation-delay: 1s;
+}
+
+.login-float-3 {
+    animation-delay: 2s;
+}
+
+@keyframes loginFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-18px);
+
+    }
+
+}
+
+.login-floating:hover {
+    transform: scale(1.12) rotate(10deg);
+    background: rgba(182, 141, 64, .18);
+}
+
+/* Logo */
+
+.login-logo {
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.login-logo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--secondary-color), #d6b060);
+    opacity: 0;
+    transition: .4s;
+}
+
+.login-logo i {
+    position: relative;
+    z-index: 2;
+    transition: .35s;
+}
+
+.login-card:hover .login-logo::before {
+    opacity: 1;
+}
+
+.login-card:hover .login-logo i {
+    color: #fff;
+    transform: rotate(-10deg) scale(1.08);
+}
+
+/* Badge */
+
+.login-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.login-badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .7), transparent);
+    transition: .8s;
+}
+
+.login-badge:hover::before {
+    left: 160%;
+}
+
+/* Role Cards */
+
+.login-role-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.login-role-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(182, 141, 64, .15), transparent 70%);
+    transition: .45s;
+}
+
+.login-role-card::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: #fff;
+    font-family: "Bootstrap-icons";
+    content: "\F26E";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    opacity: 0;
+    transform: scale(.5);
+    transition: .35s;
+}
+
+.login-role-card:hover::before {
+    left: 0;
+}
+
+.login-role-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(182, 141, 64, .45);
+}
+
+.login-role-card.active {
+    background: rgba(182, 141, 64, .08);
+    box-shadow: 0 18px 45px rgba(182, 141, 64, .18);
+}
+
+.login-role-card.active::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.login-role-card.active i {
+    transform: scale(1.15);
+    color: #F4D03F;
+}
+
+/* Inputs */
+
+.login-input-box {
+    transition: .35s;
+}
+
+.login-input-box:hover {
+    transform: translateY(-2px);
+}
+
+.login-input-box input {
+    transition: .35s;
+}
+
+.login-input-box input:focus {
+    box-shadow: 0 0 0 4px rgba(182, 141, 64, .12);
+}
+
+.login-input-box>i {
+    transition: .35s;
+}
+
+.login-input-box:focus-within>i {
+    color: var(--secondary-color);
+}
+
+.login-password-toggle {
+    transition: .35s;
+}
+
+.login-password-toggle:hover {
+
+    transform: translateY(-50%) scale(1.1);
+
+    color: var(--secondary-color);
+
+}
+
+/* Password Rules */
+
+.password-rules li {
+    transition: .35s;
+}
+
+.password-rules li.valid {
+    color: #22C55E;
+}
+
+.password-rules li.valid i::before {
+    content: "\F26A";
+}
+
+.password-rules li.valid i {
+    color: #22C55E;
+}
+
+/* Strength Bar */
+
+.password-strength-bar span {
+    background: linear-gradient(90deg, #DC2626, #F59E0B, #22C55E);
+}
+
+/* Forgot Password */
+
+.login-options a {
+    position: relative;
+}
+
+.login-options a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: .35s;
+}
+
+.login-options a:hover::after {
+    width: 100%;
+}
+
+/* Login Button */
+
+.login-btn {
+    position: relative;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.login-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .45), transparent);
+    transition: .8s;
+}
+
+.login-btn:hover::before {
+    left: 160%;
+}
+
+.login-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(182, 141, 64, .35);
+}
+
+.login-btn i {
+    transition: .35s;
+}
+
+.login-btn:hover i {
+    transform: translateX(8px);
+}
+
+/* Sign Up */
+
+.login-footer a {
+    position: relative;
+}
+
+.login-footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: .35s;
+}
+
+.login-footer a:hover::after {
+    width: 100%;
+}
+
+/* Decorative Glow */
+
+.login-section::after {
+    content: "";
+    position: absolute;
+    right: -220px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(182, 141, 64, .08), transparent 70%);
+    pointer-events: none;
+}
+
+/*--- Login Responsive ---*/
+
+@media (max-width:1199.98px) {
+
+    .login-card {
+        padding: 45px;
+    }
+
+    .login-title {
+        font-size: 2.7rem;
+    }
+
+}
+
+@media (max-width:991.98px) {
+
+    .login-section {
+        padding: 70px 0;
+    }
+
+    .login-card {
+        padding: 40px;
+    }
+
+    .login-title {
+        font-size: 2.4rem;
+    }
+
+    .login-description {
+        margin-bottom: 35px;
+    }
+
+    .login-floating {
+        display: none;
+    }
+
+    .login-role-wrapper {
+        gap: 16px;
+    }
+
+    .login-role-card {
+        padding: 22px;
+    }
+
+    .login-role-card i {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (max-width:767.98px) {
+
+    .login-section {
+        padding: 50px 15px;
+    }
+
+    .login-card {
+        padding: 35px 28px;
+        border-radius: 26px;
+    }
+
+    .login-logo {
+        width: 75px;
+        height: 75px;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .login-title {
+        font-size: 2.1rem;
+    }
+
+    .login-description {
+        font-size: .95rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .login-role-wrapper {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .login-role-card {
+        padding: 20px;
+    }
+
+    .login-group {
+        margin-bottom: 20px;
+    }
+
+    .login-input-box input {
+        height: 56px;
+        font-size: .95rem;
+    }
+
+    .password-rules {
+        gap: 6px;
+    }
+
+    .password-rules li {
+        font-size: .86rem;
+    }
+
+    .login-options {
+
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .login-btn {
+        height: 56px;
+        font-size: .95rem;
+    }
+
+    .login-footer {
+        font-size: .92rem;
+        margin-top: 25px;
+    }
+
+}
+
+@media (max-width:575.98px) {
+
+    .login-section {
+        padding: 30px 12px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+        border-radius: 22px;
+    }
+
+    .login-logo {
+        width: 65px;
+        height: 65px;
+        font-size: 1.6rem;
+    }
+
+    .login-badge {
+        padding: 8px 16px;
+        font-size: .8rem;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .login-description {
+        font-size: .9rem;
+    }
+
+    .login-role-card {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .login-role-card h5 {
+        font-size: 1rem;
+    }
+
+    .login-role-card small {
+        font-size: .8rem;
+    }
+
+    .login-input-box>i {
+        left: 16px;
+    }
+
+    .login-input-box input {
+        height: 52px;
+        padding-left: 48px;
+        padding-right: 48px;
+        font-size: .9rem;
+        border-radius: 16px;
+    }
+
+    .login-password-toggle {
+        right: 15px;
+        font-size: 1rem;
+    }
+
+    .password-strength-bar {
+        height: 6px;
+    }
+
+    .password-rules li {
+        font-size: .8rem;
+    }
+
+    .login-btn {
+        height: 52px;
+        border-radius: 16px;
+    }
+
+    .login-footer {
+        font-size: .88rem;
+    }
+
+}
+
+@media (max-width:380px) {
+
+    .login-card {
+        padding: 24px 18px;
+    }
+
+    .login-title {
+        font-size: 1.6rem;
+    }
+
+    .login-description {
+        font-size: .85rem;
+    }
+
+    .login-role-card {
+        padding: 16px;
+    }
+
+    .login-role-card i {
+        font-size: 1.5rem;
+    }
+
+    .login-role-card h5 {
+        font-size: .95rem;
+    }
+
+    .login-input-box input {
+        height: 50px;
+        font-size: .85rem;
+    }
+
+    .login-btn {
+        height: 50px;
+        font-size: .9rem;
+    }
+
+    .password-rules li {
+        font-size: .76rem;
+    }
+
+}
+
+.login-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+/*--- Register Page ---*/
+
+#registerForm .login-group {
+    margin-bottom: 22px;
+}
+
+#registerForm .login-btn {
+    margin-top: 8px;
+}
+
+#registerForm .form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+#registerForm .form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, .3);
+    background: transparent;
+}
+
+#registerForm .form-check-input:checked {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+#registerForm .form-check-input:focus {
+    box-shadow: none;
+}
+
+#registerForm .form-check-label {
+    font-size: .95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, .75);
+    cursor: pointer;
+}
+
+#registerForm .login-footer {
+    margin-top: 28px;
+}
+
+/*------------------------------------
+Password Strength
+------------------------------------*/
+
+.password-strength {
+    margin-top: -6px;
+    margin-bottom: 24px;
+}
+
+.password-strength-bar {
+    width: 100%;
+    height: 7px;
+    background: rgba(255, 255, 255, .08);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.password-strength-bar span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #EF4444, #F59E0B, #22C55E);
+    border-radius: 50px;
+    transition: .35s;
+}
+
+.password-rules {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.password-rules li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .88rem;
+    color: rgba(255, 255, 255, .65);
+    transition: .3s;
+}
+
+.password-rules li i {
+    font-size: .72rem;
+    color: #94A3B8;
+}
+
+.password-rules li.valid {
+    color: #22C55E;
+}
+
+.password-rules li.valid i {
+    color: #22C55E;
+}
+
+/*------------------------------------
+Success Modal
+------------------------------------*/
+
+.auth-success-modal {
+    background: rgba(15, 23, 42, .95);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(182, 141, 64, .18);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
+}
+
+.auth-success-modal .modal-body {
+    padding: 55px 45px;
+}
+
+.auth-success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, .12);
+    border: 2px solid rgba(34, 197, 94, .25);
+    font-size: 3rem;
+    color: #22C55E;
+}
+
+.auth-success-modal h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.auth-success-modal p {
+    font-size: .98rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, .72);
+    margin-bottom: 35px;
+}
+
+.auth-success-btn {
+    min-width: 220px;
+    height: 56px;
+    border: none;
+    border-radius: 16px;
+    background: var(--secondary-color);
+    color: #fff;
+    font-weight: 600;
+    transition: .35s;
+}
+
+.auth-success-btn:hover {
+    background: #c79b43;
+    color: #fff;
+}
+
+/*------------------------------------
+Modal Animation
+------------------------------------*/
+
+.modal.fade .modal-dialog {
+    transform: scale(.85);
+    transition: .35s ease;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/*--- Premium Register Effects ---*/
+
+/* Password Rules Hover */
+
+.password-rules li {
+
+    position: relative;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+.password-rules li::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -100%;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08), transparent);
+
+    transition: .6s;
+
+}
+
+.password-rules li:hover::before {
+
+    left: 100%;
+
+}
+
+.password-rules li:hover {
+
+    background: rgba(255, 255, 255, .04);
+
+    transform: translateX(4px);
+
+}
+
+/*----------------------------------
+Password Strength Animation
+----------------------------------*/
+
+.password-strength-bar {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.password-strength-bar span {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.password-strength-bar span::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -40%;
+
+    width: 35%;
+
+    height: 100%;
+
+    background: rgba(255, 255, 255, .35);
+
+    filter: blur(2px);
+
+    animation: strengthShine 2s linear infinite;
+
+}
+
+@keyframes strengthShine {
+
+    0% {
+
+        left: -40%;
+
+    }
+
+    100% {
+
+        left: 120%;
+
+    }
+
+}
+
+/*----------------------------------
+Success Icon Pulse
+----------------------------------*/
+
+.auth-success-icon {
+
+    position: relative;
+
+    animation: successPulse 2.5s infinite;
+
+}
+
+.auth-success-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(34, 197, 94, .35);
+
+    animation: ripple 2s infinite;
+
+}
+
+@keyframes successPulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+@keyframes ripple {
+
+    0% {
+
+        transform: scale(.9);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: scale(1.7);
+
+        opacity: 0;
+
+    }
+
+}
+
+/*----------------------------------
+Success Modal Glow
+----------------------------------*/
+
+.auth-success-modal {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.auth-success-modal::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    background: rgba(182, 141, 64, .08);
+
+    border-radius: 50%;
+
+    top: -120px;
+
+    right: -120px;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+}
+
+.auth-success-modal::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: rgba(37, 99, 235, .08);
+
+    border-radius: 50%;
+
+    left: -80px;
+
+    bottom: -80px;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+}
+
+/*----------------------------------
+Button Shine
+----------------------------------*/
+
+.auth-success-btn,
+
+.login-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.auth-success-btn::before,
+
+.login-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(120deg,
+
+            transparent,
+
+            rgba(255, 255, 255, .45),
+
+            transparent);
+
+    transform: skewX(-20deg);
+
+    transition: .8s;
+
+}
+
+.auth-success-btn:hover::before,
+
+.login-btn:hover::before {
+
+    left: 170%;
+
+}
+
+.auth-success-btn:hover,
+
+.login-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 18px 40px rgba(182, 141, 64, .35);
+
+}
+
+/*----------------------------------
+Card Hover
+----------------------------------*/
+
+.login-card {
+
+    transition: .45s;
+
+}
+
+.login-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 35px 90px rgba(0, 0, 0, .45);
+
+}
+
+/*----------------------------------
+Password Toggle
+----------------------------------*/
+
+.login-password-toggle {
+
+    transition: .35s;
+
+}
+
+
+/*----------------------------------
+Input Focus
+----------------------------------*/
+
+.login-input-box {
+
+    transition: .35s;
+
+}
+
+.login-input-box:focus-within {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 0 0 2px rgba(182, 141, 64, .18),
+
+        0 15px 35px rgba(0, 0, 0, .25);
+
+}
+
+/*----------------------------------
+Modal Entrance
+----------------------------------*/
+
+.modal.show .modal-dialog {
+
+    animation: modalPop .45s ease;
+
+}
+
+@keyframes modalPop {
+
+    0% {
+
+        transform: scale(.75);
+
+        opacity: 0;
+
+    }
+
+    60% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+/*----------------------------------
+Floating Success Sparkles
+----------------------------------*/
+
+.auth-success-icon i {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.auth-success-icon::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: -10px;
+
+    right: -8px;
+
+    font-size: 20px;
+
+    color: #FACC15;
+
+    animation: sparkle 1.8s infinite;
+
+}
+
+@keyframes sparkle {
+
+    0% {
+
+        transform: translateY(0) scale(.6);
+
+        opacity: 0;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: translateY(-8px) scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform: translateY(-16px) scale(.6);
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .password-rules {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+    .password-rules li {
+
+        font-size: .9rem;
+
+        padding: 12px 14px;
+
+    }
+
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Login | Legal Consulting</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+</head>
+
+<body>
+
+    <!-- Login Section Start -->
+
+    <section class="login-section">
+
+        <!-- Background -->
+
+        <div class="login-bg-circle login-bg-circle-1"></div>
+
+        <div class="login-bg-circle login-bg-circle-2"></div>
+
+        <div class="login-grid"></div>
+
+        <!-- Floating Icons -->
+
+        <div class="login-floating login-float-1">
+
+            <i class="fa-solid fa-gavel"></i>
+
+        </div>
+
+        <div class="login-floating login-float-2">
+
+            <i class="bi bi-shield-lock"></i>
+
+        </div>
+
+        <div class="login-floating login-float-3">
+
+            <i class="fa-solid fa-scale-balanced"></i>
+
+        </div>
+
+        <div class="container">
+
+            <div class="row justify-content-center align-items-center min-vh-100">
+
+                <div class="col-xl-5 col-lg-6 col-md-8">
+
+                    <div class="login-card">
+
+                        <!-- Logo -->
+
+                        <div class="login-logo">
+
+                            <i class="bi bi-bank2"></i>
+
+                        </div>
+
+                        <div class="login-header">
+                            <!-- Heading -->
+
+                            <span class="login-badge">
+
+                                Secure Authentication
+
+                            </span>
+
+                            <h1 class="login-title">
+
+                                Welcome Back
+
+                            </h1>
+
+                            <p class="login-description">
+
+                                Access your Legal Consulting workspace securely by selecting your portal and signing in.
+
+                            </p>
+                        </div>
+
+                        <!-- Portal Selection -->
+
+                        <div class="login-role-wrapper">
+
+                            <div class="login-role-card active" data-role="client">
+
+                                <input type="radio" name="role" value="client" checked hidden>
+
+                                <i class="bi bi-person-fill"></i>
+
+                                <h5>
+
+                                    Client
+
+                                </h5>
+
+
+                            </div>
+
+                            <div class="login-role-card" data-role="admin">
+
+                                <input type="radio" name="role" value="admin" hidden>
+
+                                <i class="bi bi-shield-lock-fill"></i>
+
+                                <h5>
+
+                                    Admin
+
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Form -->
+
+                        <form id="loginForm" novalidate>
+
+                            <!-- Email -->
+
+                            <div class="login-group">
+
+                                <label>
+
+                                    Email Address
+
+                                </label>
+
+                                <div class="login-input-box">
+
+                                    <i class="bi bi-envelope-fill"></i>
+
+                                    <input type="email" id="email" class="form-control" placeholder="Enter your email"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Password -->
+
+                            <div class="login-group">
+
+                                <label>
+
+                                    Password
+
+                                </label>
+
+                                <div class="login-input-box">
+
+                                    <i class="bi bi-lock-fill"></i>
+
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Enter your password" required>
+
+                                    <button type="button" class="login-password-toggle" id="togglePassword">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Remember -->
+
+                            <div class="login-options">
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+
+                                    <label class="form-check-label" for="rememberMe">
+
+                                        Remember Me
+
+                                    </label>
+
+                                </div>
+
+                                <a href="404.html">
+
+                                    Forgot Password?
+
+                                </a>
+
+                            </div>
+
+                            <!-- Button -->
+
+                            <button type="submit" class="btn login-btn">
+
+                                Login
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                            <!-- Signup -->
+
+                            <div class="login-footer">
+
+                                Don't have an account?
+
+                                <a href="register.html">
+
+                                    Sign Up
+
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Login Section End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/auth.js"></script>
+
+</body>
+
+</html>
