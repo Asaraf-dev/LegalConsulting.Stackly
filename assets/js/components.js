@@ -1,29 +1,37 @@
+/*====================
+    LOAD COMPONENT
+====================*/
+
 async function loadComponent(id, file) {
 
-    const response = await fetch(file);
+    try {
 
-    const html = await response.text();
+        const element = document.getElementById(id);
 
-    document.getElementById(id).innerHTML = html;
+        if (!element) {
+
+            console.error(`Element with ID "${id}" not found.`);
+
+            return;
+
+        }
+
+        const response = await fetch(file);
+
+        if (!response.ok) {
+
+            throw new Error(`Failed to load ${file}`);
+
+        }
+
+        const html = await response.text();
+
+        element.innerHTML = html;
+
+    } catch (error) {
+
+        console.error("Component Loading Error:", error);
+
+    }
 
 }
-
-document.addEventListener("DOMContentLoaded", async () => {
-
-    await loadComponent("navbar", "assets/components/navbar.html");
-
-    await loadComponent("footer", "assets/components/footer.html");
-
-    initLoader();          // <-- Add this
-    initNavbar();
-    initStickyHeader();
-    initActiveNavbar();
-    initFooter();
-
-    document.dispatchEvent(
-        new CustomEvent("componentsLoaded")
-    );
-
-});
-
-

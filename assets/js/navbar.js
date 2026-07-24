@@ -42,23 +42,41 @@ function initNavbar() {
 
 function initStickyHeader() {
 
+    console.log("Sticky Header Initialized");
+
     const wrapper = document.querySelector(".lc-header-wrapper");
+    const header = document.querySelector(".lc-header");
 
-    if (!wrapper) return;
+    console.log(wrapper);
+    console.log(header);
 
-    window.addEventListener("scroll", () => {
+    if (!wrapper || !header) return;
+
+    function updateHeader() {
+
+        console.log("Scroll:", window.scrollY);
 
         if (window.scrollY > 60) {
 
+            console.log("ADD");
+
             wrapper.classList.add("header-scrolled");
+            header.classList.add("header-scrolled");
 
         } else {
 
+            console.log("REMOVE");
+
             wrapper.classList.remove("header-scrolled");
+            header.classList.remove("header-scrolled");
 
         }
 
-    });
+    }
+
+    updateHeader();
+
+    window.addEventListener("scroll", updateHeader);
 
 }
 

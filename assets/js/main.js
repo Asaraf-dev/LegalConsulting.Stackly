@@ -4,12 +4,27 @@
 
 /*--- DOM READY ---*/
 
-document.addEventListener("DOMContentLoaded", () => {
+"use strict";
 
-    initPreloader();
+document.addEventListener("DOMContentLoaded", async () => {
+
+    await loadComponent("navbar", "assets/components/navbar.html");
+
+    await loadComponent("footer", "assets/components/footer.html");
+
+    initNavbar();
+
     initStickyHeader();
+
+    initActiveNavbar();
+
+    initFooter();
+
+    initLoader();
+
+    
     initBackToTop();
-    initActiveNav();
+
     initSmoothScroll();
     initCounter();
     initCurrentYear();
