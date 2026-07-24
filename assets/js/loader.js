@@ -15,7 +15,7 @@ function initLoader() {
         return;
 
     }
-    const LOADER_DELAY = 2000;
+    const LOADER_DELAY = 1000;
 
     /*--- Show Loader ---*/
 

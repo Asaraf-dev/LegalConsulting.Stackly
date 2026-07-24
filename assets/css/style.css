@@ -9060,13 +9060,7 @@ Social
 
 }
 
-.expert-social a::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
+.expert-social a:hover {
 
     background: linear-gradient(135deg,
             var(--secondary-color),
