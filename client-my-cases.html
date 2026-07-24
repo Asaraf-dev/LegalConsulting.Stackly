@@ -115,11 +115,11 @@
                     <div>
 
                         <h3 class="page-title">
-                            Documents
+                            My Cases
                         </h3>
 
                         <p class="page-subtitle">
-                            Access, download, and securely manage all documents.
+                            View and track the progress of your legal cases.
                         </p>
 
                     </div>
@@ -162,21 +162,17 @@
 
                 <div class="dashboard-container">
 
-                    <!--- DOCUMENTS HEADER --->
+                    <!--- MY CASES PAGE HEADER --->
 
                     <div class="page-header">
 
                         <div>
 
-                            <h2>
-
-                                Documents
-
-                            </h2>
+                            <h2>My Cases</h2>
 
                             <p>
 
-                                Access, download, and manage your legal documents securely.
+                                Track the progress and latest updates of your legal cases.
 
                             </p>
 
@@ -184,7 +180,7 @@
 
                     </div>
 
-                    <!--- DOCUMENT STATISTICS --->
+                    <!--- CASE STATISTICS --->
 
                     <div class="row g-4 mb-4">
 
@@ -194,37 +190,15 @@
 
                                 <div class="case-stat-icon">
 
-                                    <i class="bi bi-file-earmark-text-fill"></i>
+                                    <i class="bi bi-folder2-open"></i>
 
                                 </div>
 
                                 <div>
 
-                                    <h3>18</h3>
+                                    <h3>4</h3>
 
-                                    <p>Total Documents</p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-3 col-md-6">
-
-                            <div class="case-stat-card">
-
-                                <div class="case-stat-icon success">
-
-                                    <i class="bi bi-cloud-check-fill"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <h3>12</h3>
-
-                                    <p>Verified</p>
+                                    <p>Total Cases</p>
 
                                 </div>
 
@@ -238,15 +212,15 @@
 
                                 <div class="case-stat-icon warning">
 
-                                    <i class="bi bi-clock-history"></i>
+                                    <i class="bi bi-hourglass-split"></i>
 
                                 </div>
 
                                 <div>
 
-                                    <h3>3</h3>
+                                    <h3>2</h3>
 
-                                    <p>Recently Added</p>
+                                    <p>Pending</p>
 
                                 </div>
 
@@ -260,15 +234,37 @@
 
                                 <div class="case-stat-icon primary">
 
-                                    <i class="bi bi-download"></i>
+                                    <i class="bi bi-arrow-repeat"></i>
 
                                 </div>
 
                                 <div>
 
-                                    <h3>46</h3>
+                                    <h3>1</h3>
 
-                                    <p>Downloads</p>
+                                    <p>In Progress</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="case-stat-card">
+
+                                <div class="case-stat-icon success">
+
+                                    <i class="bi bi-check-circle"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>1</h3>
+
+                                    <p>Completed</p>
 
                                 </div>
 
@@ -284,34 +280,33 @@
 
                         <div class="row g-3 align-items-center">
 
-                            <div class="col-lg-6">
+                            <div class="col-xl-6">
 
                                 <div class="position-relative">
 
                                     <i class="bi bi-search filter-search-icon"></i>
 
                                     <input type="search" class="form-control filter-input"
-                                        placeholder="Search documents">
+                                        placeholder="Search by case ID or case title">
 
                                 </div>
 
                             </div>
 
-                            <div class="col-lg-3">
+                            <div class="col-xl-3 col-md-6">
 
                                 <select class="form-select filter-select">
 
-                                    <option>Document Type</option>
-                                    <option>Agreement</option>
-                                    <option>Evidence</option>
-                                    <option>Court Order</option>
-                                    <option>Invoice</option>
+                                    <option>Case Status</option>
+                                    <option>Pending</option>
+                                    <option>In Progress</option>
+                                    <option>Completed</option>
 
                                 </select>
 
                             </div>
 
-                            <div class="col-lg-3">
+                            <div class="col-xl-3 col-md-6">
 
                                 <a href="404.html" class="filter-btn">
 
@@ -331,211 +326,127 @@
 
                         <div class="col-xl-6">
 
-                            <div class="dashboard-card">
+                            <div class="case-card">
 
-                                <div class="d-flex justify-content-between align-items-start mb-4">
+                                <div class="case-body">
 
-                                    <div>
+                                    <div class="case-card-header">
 
-                                        <i class="bi bi-file-earmark-pdf-fill fs-1 text-danger"></i>
+                                        <div>
+
+                                            <span class="case-id">
+
+                                                LC-1024
+
+                                            </span>
+
+                                            <h4>
+
+                                                Property Dispute
+
+                                            </h4>
+
+                                        </div>
+
+                                        <span class="case-status progress-status">
+
+                                            In Progress
+
+                                        </span>
 
                                     </div>
 
-                                    <span class="badge bg-success">
+                                    <div class="case-details">
 
-                                        Verified
+                                        <div>
 
-                                    </span>
+                                            <i class="bi bi-person-workspace"></i>
+
+                                            <span>
+
+                                                David Miller
+
+                                            </span>
+
+                                        </div>
+
+                                        <div>
+
+                                            <i class="bi bi-calendar-event"></i>
+
+                                            <span>
+
+                                                Next Hearing: 28 Jul 2026
+
+                                            </span>
+
+                                        </div>
+
+                                        <div>
+
+                                            <i class="bi bi-building"></i>
+
+                                            <span>
+
+                                                Chennai High Court
+
+                                            </span>
+
+                                        </div>
+
+                                        <div>
+
+                                            <i class="bi bi-folder2-open"></i>
+
+                                            <span>
+
+                                                8 Documents
+
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="case-progress">
+
+                                        <div class="progress-header">
+
+                                            <span>
+
+                                                Case Progress
+
+                                            </span>
+
+                                            <strong>
+
+                                                72%
+
+                                            </strong>
+
+                                        </div>
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-warning" style="width:72%"></div>
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
 
-                                <h5>
+                                <div class="case-footer">
 
-                                    Property Agreement.pdf
+                                    <a href="404.html" class="btn btn-outline-dark">
 
-                                </h5>
-
-                                <p class="text-muted mb-4">
-
-                                    Uploaded on 18 Jul 2026 • 2.4 MB
-
-                                </p>
-
-                                <div class="row text-center mb-4">
-
-                                    <div class="col-4">
-
-                                        <small class="text-muted d-block">
-
-                                            Type
-
-                                        </small>
-
-                                        <strong>
-
-                                            PDF
-
-                                        </strong>
-
-                                    </div>
-
-                                    <div class="col-4">
-
-                                        <small class="text-muted d-block">
-
-                                            Case
-
-                                        </small>
-
-                                        <strong>
-
-                                            LC-1024
-
-                                        </strong>
-
-                                    </div>
-
-                                    <div class="col-4">
-
-                                        <small class="text-muted d-block">
-
-                                            Downloads
-
-                                        </small>
-
-                                        <strong>
-
-                                            12
-
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="d-flex gap-2">
-
-                                    <a href="404.html" class="btn btn-outline-dark flex-fill">
-
-                                        <i class="bi bi-eye"></i>
-
-                                        View
+                                        View Details
 
                                     </a>
 
-                                    <a href="404.html" class="btn btn-primary flex-fill">
+                                    <a href="client-documents.html" class="btn btn-outline-primary">
 
-                                        <i class="bi bi-download"></i>
-
-                                        Download
-
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-6">
-
-                            <div class="dashboard-card">
-
-                                <div class="d-flex justify-content-between align-items-start mb-4">
-
-                                    <div>
-
-                                        <i class="bi bi-file-earmark-word-fill fs-1 text-primary"></i>
-
-                                    </div>
-
-                                    <span class="badge bg-warning text-dark">
-
-                                        Pending
-
-                                    </span>
-
-                                </div>
-
-                                <h5>
-
-                                    Witness Statement.docx
-
-                                </h5>
-
-                                <p class="text-muted mb-4">
-
-                                    Uploaded on 20 Jul 2026 • 980 KB
-
-                                </p>
-
-                                <div class="row text-center mb-4">
-
-                                    <div class="col-4">
-
-                                        <small class="text-muted d-block">
-
-                                            Type
-
-                                        </small>
-
-                                        <strong>
-
-                                            DOCX
-
-                                        </strong>
-
-                                    </div>
-
-                                    <div class="col-4">
-
-                                        <small class="text-muted d-block">
-
-                                            Case
-
-                                        </small>
-
-                                        <strong>
-
-                                            LC-1051
-
-                                        </strong>
-
-                                    </div>
-
-                                    <div class="col-4">
-
-                                        <small class="text-muted d-block">
-
-                                            Downloads
-
-                                        </small>
-
-                                        <strong>
-
-                                            5
-
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="d-flex gap-2">
-
-                                    <a href="404.html" class="btn btn-outline-dark flex-fill">
-
-                                        <i class="bi bi-eye"></i>
-
-                                        View
-
-                                    </a>
-
-                                    <a href="404.html" class="btn btn-primary flex-fill">
-
-                                        <i class="bi bi-download"></i>
-
-                                        Download
+                                        Documents
 
                                     </a>
 

@@ -1,83 +1,150 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Consulting | Admin</title>
+    <title>Legal Consulting | Admin </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main favicon -->
     <link rel="icon" href="favicon.ico">
+
+    <!-- webp favicons -->
     <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.webp">
     <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.webp">
+
+    <!-- Apple -->
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.webp">
+
+    <!-- Android -->
     <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.webp">
     <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.webp">
+
+    <!-- Manifest -->
     <link rel="manifest" href="assets/images/site.webmanifest">
+
+    <!--- Icon Code --->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="stylesheet" href="assets/css/dashboard.css">
+
 </head>
 
 <body>
 
-    <!--- Admin Dashboard Start --->
-
     <div class="dashboard-wrapper">
 
-        <aside class="dashboard-sidebar">
+        <!-- Sidebar -->
 
-            <div class="sidebar-logo">
+        <!--- DASHBOARD SIDEBAR --->
 
-                <div class="sidebar-logo">
-                    <a href="index.html"> <img src="assets/images/barnd-logo-1.webp" alt="Brand-Logo"></a>
-                </div>
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+            <!-- Logo -->
+
+            <div class="dashboard-logo">
+
+                <a href="index.html">
+
+                    <img src="assets/images/barnd-logo-1.webp" alt="Logo">
+
+                </a>
 
             </div>
 
-            <ul class="sidebar-menu">
-                <li><a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a></li>
-                <li><a href="admin-cases.html"><i class="bi bi-folder-fill"></i><span>Cases</span></a></li>
-                <li><a href="admin-clients.html"><i class="bi bi-people-fill"></i><span>Clients</span></a></li>
-                <li><a href="admin-lawyers.html"><i class="bi bi-person-workspace"></i><span>Lawyers</span></a></li>
-                <li><a href="admin-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
-            </ul>
+            <!-- Navigation -->
 
-            <div class="sidebar-logout">
-                <button id="logoutBtn">
-                    <i class="bi bi-box-arrow-right"></i>
-                    Logout
-                </button>
+            <nav class="dashboard-nav">
+
+                <ul class="dashboard-menu">
+
+                    <li><a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a></li>
+                    <li><a href="admin-case.html"><i class="bi bi-folder2-open"></i><span>Cases</span></a></li>
+                    <li><a href="admin-clients.html"><i class="bi bi-people-fill"></i><span>Clients</span></a></li>
+                    <li><a href="admin-lawyers.html"><i class="bi bi-briefcase-fill"></i><span>Lawyers</span></a></li>
+                    <li><a href="admin-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Logout -->
+
+            <div class="dashboard-sidebar-footer">
+
+                <a href="login.html"> <button class="logout-btn">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        <span>Logout</span>
+
+                    </button></a>
+
             </div>
 
         </aside>
 
+        <!-- Mobile Overlay -->
+
+        <div class="sidebar-overlay"></div>
+
+        <!-- Main -->
+
         <main class="dashboard-main">
+
+            <!-- Topbar -->
 
             <header class="dashboard-topbar">
 
                 <div class="topbar-left">
+
                     <button class="sidebar-toggle">
+
                         <i class="bi bi-list"></i>
+
                     </button>
-                    <h4 id="pageTitle">Admin</h4>
+
+                    <div>
+
+                        <h3 class="page-title">
+                            Overview
+                        </h3>
+
+                        <p class="page-subtitle">
+                            Welcome back, Administrator
+                        </p>
+
+                    </div>
+
                 </div>
 
                 <div class="topbar-right">
 
-                    <button class="topbar-icon">
-                        <i class="bi bi-bell-fill"></i>
-                    </button>
+                    <div class="topbar-user">
 
-                    <div class="topbar-profile">
+                        <div class="user-details">
 
-                        <div class="profile-avatar">
-                            <img src="assets/images/profile-2.webp" id="profileImage" alt="Admin">
+                            <h6 id="dashboardUserName">
+
+                                Administrator
+
+                            </h6>
+
+                            <small id="dashboardUserEmail">
+
+                                admin@email.com
+
+                            </small>
+
                         </div>
 
-                        <div class="profile-content">
-                            <h6 id="topUserName">Administrator</h6>
-                            <small id="topUserEmail">admin@email.com</small>
-                        </div>
+                        <img id="dashboardProfile" src="assets/images/profile-1.webp" alt="Profile">
 
                     </div>
 
@@ -85,348 +152,383 @@
 
             </header>
 
-            <!--- Dashboard Content --->
+            <!-- Content -->
 
-            <div class="dashboard-content">
+            <!--- DASHBOARD CONTENT --->
 
-                <!--- Page Header --->
+            <section class="dashboard-content">
 
-                <div class="page-header">
+                <div class="dashboard-container">
 
-                    <div>
+                    <!--- DASHBOARD OVERVIEW --->
 
-                        <h2>
+                    <div class="dashboard-overview">
 
-                            Admin Dashboard
+                        <!-- Welcome Card -->
 
-                        </h2>
+                        <div class="welcome-card">
 
-                        <p>
+                            <div>
 
-                            Welcome back! Manage your legal firm from one centralized dashboard.
+                                <h2>Welcome Back, Administrator</h2>
 
-                        </p>
-
-                    </div>
-
-                    <a href="404.html" class="btn btn-dark new-case-btn">
-
-                        <i class="bi bi-download me-2"></i>
-
-                        Download Report
-
-                    </a>
-
-                </div>
-
-                <!--- Welcome Card --->
-
-                <div class="welcome-card">
-
-                    <div class="welcome-content">
-
-                        <span class="welcome-badge">
-
-                            Administrator
-
-                        </span>
-
-                        <h2>
-
-                            Welcome Back,
-                            <span id="dashboardAdminName">Administrator</span>
-
-                        </h2>
-
-                        <p>
-
-                            Monitor clients, lawyers, legal cases and appointments from your administration dashboard.
-
-                        </p>
-
-                        <div class="welcome-buttons">
-
-                            <a href="admin-clients.html" class="btn btn-primary">
-
-                                <i class="bi bi-people-fill me-2"></i>
-
-                                Clients
-
-                            </a>
-
-                            <a href="admin-cases.html" class="btn btn-light">
-
-                                <i class="bi bi-folder-fill me-2"></i>
-
-                                Cases
-
-                            </a>
-
-                            <a href="404.html" class="btn btn-outline-light">
-
-                                <i class="bi bi-plus-circle-fill me-2"></i>
-
-                                New Case
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="welcome-image">
-
-                        <i class="bi bi-briefcase-fill"></i>
-
-                    </div>
-
-                </div>
-
-                <!--- Statistics --->
-
-                <div class="row g-4">
-
-                    <div class="col-xl-3 col-md-6">
-
-                        <div class="stats-card">
-
-                            <div class="stats-icon">
-
-                                <i class="bi bi-people-fill"></i>
+                                <p>
+                                    Manage your legal consulting system efficiently from one place.
+                                </p>
 
                             </div>
 
-                            <div class="stats-content">
+                            <div class="welcome-date">
 
-                                <span>
+                                <i class="bi bi-calendar-event"></i>
 
-                                    Total Clients
-
-                                </span>
-
-                                <h3>
-
-                                    248
-
-                                </h3>
-
-                                <small>
-
-                                    <i class="bi bi-arrow-up-right"></i>
-
-                                    +12%
-
-                                </small>
+                                <span>24 Jul 2026</span>
 
                             </div>
 
                         </div>
 
-                    </div>
+                        <!-- Statistics -->
 
-                    <div class="col-xl-3 col-md-6">
+                        <div class="row g-4 mt-1">
 
-                        <div class="stats-card">
+                            <div class="col-xl-3 col-md-6">
 
-                            <div class="stats-icon blue">
+                                <div class="stats-card">
 
-                                <i class="bi bi-folder-fill"></i>
+                                    <div class="stats-icon">
 
-                            </div>
+                                        <i class="bi bi-folder2-open"></i>
 
-                            <div class="stats-content">
+                                    </div>
 
-                                <span>
+                                    <div>
 
-                                    Active Cases
+                                        <h3>125</h3>
 
-                                </span>
+                                        <p>Total Cases</p>
 
-                                <h3>
-
-                                    86
-
-                                </h3>
-
-                                <small class="text-primary">
-
-                                    12 New
-
-                                </small>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-3 col-md-6">
-
-                        <div class="stats-card">
-
-                            <div class="stats-icon green">
-
-                                <i class="bi bi-person-workspace"></i>
-
-                            </div>
-
-                            <div class="stats-content">
-
-                                <span>
-
-                                    Lawyers
-
-                                </span>
-
-                                <h3>
-
-                                    15
-
-                                </h3>
-
-                                <small class="text-success">
-
-                                    13 Available
-
-                                </small>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-3 col-md-6">
-
-                        <div class="stats-card">
-
-                            <div class="stats-icon orange">
-
-                                <i class="bi bi-cash-stack"></i>
-
-                            </div>
-
-                            <div class="stats-content">
-
-                                <span>
-
-                                    Revenue
-
-                                </span>
-
-                                <h3>
-
-                                    ₹4.8L
-
-                                </h3>
-
-                                <small>
-
-                                    +22%
-
-                                </small>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!--- Dashboard Section --->
-
-                <div class="dashboard-section">
-
-                    <div class="row g-4">
-
-                        <div class="col-lg-4">
-
-                            <div class="section-title">
-
-                                <h4>
-
-                                    Quick Actions
-
-                                </h4>
-
-                            </div>
-
-                            <div class="row g-4">
-
-                                <div class="col-md-6 col-lg-12">
-
-                                    <a href="404.html" class="quick-card">
-
-                                        <i class="bi bi-person-plus-fill"></i>
-
-                                        <h5>
-
-                                            Add Client
-
-                                        </h5>
-
-                                        <p>
-
-                                            Register a new client and manage their legal records.
-
-                                        </p>
-
-                                    </a>
+                                    </div>
 
                                 </div>
 
-                                <div class="col-md-6 col-lg-12">
+                            </div>
 
-                                    <a href="404.html" class="quick-card">
+                            <div class="col-xl-3 col-md-6">
+
+                                <div class="stats-card">
+
+                                    <div class="stats-icon">
+
+                                        <i class="bi bi-people"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h3>82</h3>
+
+                                        <p>Clients</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+
+                                <div class="stats-card">
+
+                                    <div class="stats-icon">
+
+                                        <i class="bi bi-briefcase"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h3>12</h3>
+
+                                        <p>Lawyers</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+
+                                <div class="stats-card">
+
+                                    <div class="stats-icon">
+
+                                        <i class="bi bi-calendar-check"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h3>9</h3>
+
+                                        <p>Today's Hearings</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--- RECENT CASES & TODAY'S HEARINGS --->
+
+                    <div class="row g-4 mt-4">
+
+                        <!-- Recent Cases -->
+
+                        <div class="col-lg-8">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Recent Cases</h5>
+
+                                    <a href="admin-case.html">View All</a>
+
+                                </div>
+
+                                <div class="recent-case-list">
+
+                                    <div class="recent-case-item">
+
+                                        <div>
+
+                                            <h6>Corporate Agreement Review</h6>
+
+                                            <span>John Anderson</span>
+
+                                        </div>
+
+                                        <span class="case-status progress-status">
+
+                                            Progress
+
+                                        </span>
+
+                                    </div>
+
+                                    <div class="recent-case-item">
+
+                                        <div>
+
+                                            <h6>Property Dispute</h6>
+
+                                            <span>Michael Brown</span>
+
+                                        </div>
+
+                                        <span class="case-status pending-status">
+
+                                            Pending
+
+                                        </span>
+
+                                    </div>
+
+                                    <div class="recent-case-item">
+
+                                        <div>
+
+                                            <h6>Family Settlement</h6>
+
+                                            <span>Sarah Wilson</span>
+
+                                        </div>
+
+                                        <span class="case-status complete-status">
+
+                                            Completed
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Hearings -->
+
+                        <div class="col-lg-4">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Today's Hearings</h5>
+
+                                </div>
+
+                                <div class="hearing-list">
+
+                                    <div class="hearing-item">
+
+                                        <strong>09:30 AM</strong>
+
+                                        <span>Civil Litigation</span>
+
+                                    </div>
+
+                                    <div class="hearing-item">
+
+                                        <strong>11:00 AM</strong>
+
+                                        <span>Property Case</span>
+
+                                    </div>
+
+                                    <div class="hearing-item">
+
+                                        <strong>02:30 PM</strong>
+
+                                        <span>Corporate Law</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--- RECENT CLIENTS & QUICK ACTIONS --->
+
+                    <div class="row g-4 mt-1">
+
+                        <!-- Recent Clients -->
+
+                        <div class="col-xl-8 col-lg-7">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Recent Clients</h5>
+
+                                    <a href="admin-clients.html">View All</a>
+
+                                </div>
+
+                                <div class="recent-client-list">
+
+                                    <div class="recent-client-item">
+
+                                        <img src="assets/images/profile-4.webp" alt="">
+
+                                        <div class="client-info">
+
+                                            <h6>John Anderson</h6>
+
+                                            <span>Corporate Law</span>
+
+                                        </div>
+
+                                        <small>Today</small>
+
+                                    </div>
+
+                                    <div class="recent-client-item">
+
+                                        <img src="assets/images/profile-3.webp" alt="">
+
+                                        <div class="client-info">
+
+                                            <h6>Sarah Wilson</h6>
+
+                                            <span>Property Case</span>
+
+                                        </div>
+
+                                        <small>Yesterday</small>
+
+                                    </div>
+
+                                    <div class="recent-client-item">
+
+                                        <img src="assets/images/profile-5.webp" alt="">
+
+                                        <div class="client-info">
+
+                                            <h6>Michael Brown</h6>
+
+                                            <span>Family Law</span>
+
+                                        </div>
+
+                                        <small>2 Days Ago</small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Quick Actions -->
+
+                        <div class="col-xl-4 col-lg-5">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Quick Actions</h5>
+
+                                </div>
+
+                                <div class="quick-action-grid">
+
+                                    <a href="admin-case.html" class="quick-action-card">
 
                                         <i class="bi bi-folder-plus"></i>
 
-                                        <h5>
-
-                                            Create Case
-
-                                        </h5>
-
-                                        <p>
-
-                                            Create a new legal case and assign it to a lawyer.
-
-                                        </p>
+                                        <span>New Case</span>
 
                                     </a>
 
-                                </div>
+                                    <a href="admin-clients.html" class="quick-action-card">
 
-                            </div>
+                                        <i class="bi bi-person-plus"></i>
 
-                        </div>
+                                        <span>Add Client</span>
 
-                        <div class="col-lg-8">
+                                    </a>
 
-                            <div class="dashboard-card">
+                                    <a href="admin-lawyers.html" class="quick-action-card">
 
-                                <div class="dashboard-card-header">
+                                        <i class="bi bi-person-workspace"></i>
 
-                                    <h4>
+                                        <span>Add Lawyer</span>
 
-                                        Revenue Overview
+                                    </a>
 
-                                    </h4>
+                                    <a href="404.html" class="quick-action-card">
 
-                                    <select class="form-select w-auto">
+                                        <i class="bi bi-file-earmark-bar-graph"></i>
 
-                                        <option>This Year</option>
+                                        <span>Reports</span>
 
-                                        <option>Last Year</option>
-
-                                    </select>
-
-                                </div>
-
-                                <div style="height:380px;">
-
-                                    <canvas id="revenueChart"></canvas>
+                                    </a>
 
                                 </div>
 
@@ -436,231 +538,110 @@
 
                     </div>
 
-                </div>
+                    <!--- RECENT ACTIVITY --->
 
-                <!--- Dashboard Section --->
+                    <div class="row g-4 mt-1">
 
-                <div class="dashboard-section">
-
-                    <div class="row g-4">
-
-                        <div class="col-lg-4">
+                        <div class="col-12">
 
                             <div class="dashboard-card">
 
                                 <div class="dashboard-card-header">
 
-                                    <h4>
+                                    <h5>Recent Activity</h5>
 
-                                        Case Status
-
-                                    </h4>
+                                    <a href="404.html">View All</a>
 
                                 </div>
 
-                                <div style="height:320px;">
+                                <div class="activity-timeline">
 
-                                    <canvas id="caseStatusChart"></canvas>
+                                    <div class="activity-item">
 
-                                </div>
+                                        <div class="activity-icon">
 
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-8">
-
-                            <div class="dashboard-card">
-
-                                <div class="dashboard-card-header">
-
-                                    <h4>
-
-                                        Performance Summary
-
-                                    </h4>
-
-                                    <a href="404.html">
-
-                                        View Report
-
-                                    </a>
-
-                                </div>
-
-                                <div class="row g-4">
-
-                                    <div class="col-md-6">
-
-                                        <div>
-
-                                            <div class="d-flex justify-content-between mb-2">
-
-                                                <span>
-
-                                                    Case Resolution Rate
-
-                                                </span>
-
-                                                <strong>
-
-                                                    92%
-
-                                                </strong>
-
-                                            </div>
-
-                                            <div class="progress">
-
-                                                <div class="progress-bar bg-success" style="width:92%"></div>
-
-                                            </div>
+                                            <i class="bi bi-folder-plus"></i>
 
                                         </div>
 
-                                    </div>
+                                        <div class="activity-content">
 
-                                    <div class="col-md-6">
+                                            <h6>New Case Created</h6>
 
-                                        <div>
-
-                                            <div class="d-flex justify-content-between mb-2">
-
-                                                <span>
-
-                                                    Client Satisfaction
-
-                                                </span>
-
-                                                <strong>
-
-                                                    96%
-
-                                                </strong>
-
-                                            </div>
-
-                                            <div class="progress">
-
-                                                <div class="progress-bar bg-primary" style="width:96%"></div>
-
-                                            </div>
+                                            <p>
+                                                Corporate Agreement case has been created for
+                                                <strong>John Anderson</strong>.
+                                            </p>
 
                                         </div>
 
+                                        <span>10 mins ago</span>
+
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="activity-item">
 
-                                        <div>
+                                        <div class="activity-icon">
 
-                                            <div class="d-flex justify-content-between mb-2">
-
-                                                <span>
-
-                                                    Pending Cases
-
-                                                </span>
-
-                                                <strong>
-
-                                                    38%
-
-                                                </strong>
-
-                                            </div>
-
-                                            <div class="progress">
-
-                                                <div class="progress-bar bg-warning" style="width:38%"></div>
-
-                                            </div>
+                                            <i class="bi bi-person-plus"></i>
 
                                         </div>
 
-                                    </div>
+                                        <div class="activity-content">
 
-                                    <div class="col-md-6">
+                                            <h6>Client Added</h6>
 
-                                        <div>
-
-                                            <div class="d-flex justify-content-between mb-2">
-
-                                                <span>
-
-                                                    Revenue Target
-
-                                                </span>
-
-                                                <strong>
-
-                                                    81%
-
-                                                </strong>
-
-                                            </div>
-
-                                            <div class="progress">
-
-                                                <div class="progress-bar bg-info" style="width:81%"></div>
-
-                                            </div>
+                                            <p>
+                                                Sarah Wilson has been added as a new client.
+                                            </p>
 
                                         </div>
 
-                                    </div>
-
-                                    <div class="col-12">
-
-                                        <hr>
+                                        <span>30 mins ago</span>
 
                                     </div>
 
-                                    <div class="col-md-4 text-center">
+                                    <div class="activity-item">
 
-                                        <h3 class="fw-bold text-success">
+                                        <div class="activity-icon">
 
-                                            94%
+                                            <i class="bi bi-briefcase"></i>
 
-                                        </h3>
+                                        </div>
 
-                                        <p class="mb-0 text-muted">
+                                        <div class="activity-content">
 
-                                            Success Rate
+                                            <h6>Lawyer Assigned</h6>
 
-                                        </p>
+                                            <p>
+                                                Advocate David Miller assigned to Property Dispute case.
+                                            </p>
 
-                                    </div>
+                                        </div>
 
-                                    <div class="col-md-4 text-center">
-
-                                        <h3 class="fw-bold text-primary">
-
-                                            156
-
-                                        </h3>
-
-                                        <p class="mb-0 text-muted">
-
-                                            Closed Cases
-
-                                        </p>
+                                        <span>1 hour ago</span>
 
                                     </div>
 
-                                    <div class="col-md-4 text-center">
+                                    <div class="activity-item">
 
-                                        <h3 class="fw-bold" style="color:var(--secondary-color);">
+                                        <div class="activity-icon">
 
-                                            ₹4.8L
+                                            <i class="bi bi-check2-circle"></i>
 
-                                        </h3>
+                                        </div>
 
-                                        <p class="mb-0 text-muted">
+                                        <div class="activity-content">
 
-                                            Total Revenue
+                                            <h6>Case Closed</h6>
 
-                                        </p>
+                                            <p>
+                                                Family Settlement case has been marked as completed.
+                                            </p>
+
+                                        </div>
+
+                                        <span>Today</span>
 
                                     </div>
 
@@ -674,18 +655,13 @@
 
                 </div>
 
-
-            </div>
+            </section>
 
         </main>
 
     </div>
 
-    <!--- Admin Dashboard End --->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/dashboard.js"></script>
-
 </body>
 
 </html>

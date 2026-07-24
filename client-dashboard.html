@@ -31,53 +31,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
 
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 
 </head>
 
 <body>
 
-    <!--- Client Dashboard Start --->
-
     <div class="dashboard-wrapper">
 
         <!-- Sidebar -->
 
-        <aside class="dashboard-sidebar">
+        <!--- DASHBOARD SIDEBAR --->
 
-            <div class="sidebar-logo">
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
 
-                 <div class="sidebar-logo">
-               <a href="index.html"> <img src="assets/images/barnd-logo-1.webp" alt="Brand-Logo"></a>
+            <!-- Logo -->
+
+            <div class="dashboard-logo">
+
+                <a href="index.html">
+
+                    <img src="assets/images/barnd-logo-1.webp" alt="Logo">
+
+                </a>
+
             </div>
 
-            </div>
+            <!-- Navigation -->
 
-            <ul class="sidebar-menu">
+            <nav class="dashboard-nav">
 
-                <li><a href="client-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a></li>
-                <li><a href="client-my-case.html"><i class="bi bi-folder-fill"></i><span>My Cases</span></a></li>
-                
-                <li><a href="client-documents.html"><i class="bi bi-file-earmark-text-fill"></i><span>Documents</span></a></li>
-                <li><a href="client-billing.html"><i class="bi bi-credit-card-fill"></i><span>Billing</span></a></li>
-                <li><a href="client-profile.html"><i class="bi bi-person-fill"></i><span>Profile</span></a></li>
+                <ul class="dashboard-menu">
 
-            </ul>
+                    <li><a href="client-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a>
+                    </li>
+                    <li><a href="client-my-cases.html"><i class="bi bi-folder2-open"></i><span>My Cases</span></a></li>
+                    <li><a href="client-lawyers.html"><i class="bi bi-briefcase-fill"></i><span>Lawyers</span></a></li>
+                    <li><a href="client-documents.html"><i
+                                class="bi bi-file-earmark-text-fill"></i><span>Documents</span></a></li>
+                    <li><a href="client-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
 
-            <div class="sidebar-logout">
+                </ul>
 
-                <button id="logoutBtn">
+            </nav>
 
-                    <i class="bi bi-box-arrow-right"></i>
+            <!-- Logout -->
 
-                    Logout
+            <div class="dashboard-sidebar-footer">
 
-                </button>
+                <a href="login.html"> <button class="logout-btn">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        <span>Logout</span>
+
+                    </button></a>
 
             </div>
 
         </aside>
+
+        <!-- Mobile Overlay -->
+
+        <div class="sidebar-overlay"></div>
 
         <!-- Main -->
 
@@ -95,45 +112,41 @@
 
                     </button>
 
-                    <h4>
+                    <div>
 
-                        Dashboard
+                        <h3 class="page-title">
+                            Overview
+                        </h3>
 
-                    </h4>
+                        <p class="page-subtitle">
+                            Welcome back! Here's an overview of your legal matters.
+                        </p>
+
+                    </div>
 
                 </div>
 
                 <div class="topbar-right">
 
-                    <button class="topbar-icon">
+                    <div class="topbar-user">
 
-                        <i class="bi bi-bell-fill"></i>
+                        <div class="user-details">
 
-                    </button>
-
-                    <div class="topbar-profile">
-
-                        <div class="profile-avatar">
-
-                            <img src="assets/images/profile-1.webp" id="profileImage" alt="User">
-
-                        </div>
-
-                        <div class="profile-content">
-
-                            <h6 id="topUserName">
+                            <h6 id="dashboardUserName">
 
                                 Client
 
                             </h6>
 
-                            <small id="topUserEmail">
+                            <small id="dashboardUserEmail">
 
-                                client@email.com
+                                admin@email.com
 
                             </small>
 
                         </div>
+
+                        <img id="dashboardProfile" src="assets/images/profile-2.webp" alt="Profile">
 
                     </div>
 
@@ -141,545 +154,367 @@
 
             </header>
 
-            <!-- Dashboard Content -->
+            <!-- Content -->
 
-            <div class="dashboard-content">
-                <!-- Welcome Card -->
+            <!--- DASHBOARD CONTENT --->
 
-                <div class="welcome-card">
+            <section class="dashboard-content">
 
-                    <div class="welcome-content">
+                <div class="dashboard-container">
 
-                        <span class="welcome-badge">
+                    <!--==========================================
+WELCOME CARD
+===========================================-->
 
-                            Welcome Back
+                    <div class="welcome-card">
 
-                        </span>
+                        <div>
 
-                        <h2>
+                            <h2>
 
-                            Hello,
+                                Welcome Back!
 
-                            <span id="welcomeUserName">
+                            </h2>
 
-                                Client
+                            <p>
+
+                                Stay updated with your legal matters, case progress, and upcoming hearings.
+
+                            </p>
+
+                        </div>
+
+                        <div class="welcome-date">
+
+                            <i class="bi bi-calendar3"></i>
+
+                            <span>
+
+                                24 July 2026
 
                             </span>
 
-                            👋
-
-                        </h2>
-
-                        <p>
-
-                            Welcome to your Legal Consulting dashboard. Track your legal cases,
-                            appointments, documents and communicate securely with your legal advisor.
-
-                        </p>
-
-                        <div class="welcome-buttons">
-
-                            <a href="client-my-case.html" class="btn btn-primary">
-
-                                <i class="bi bi-folder-plus"></i>
-
-                                New Case
-
-                            </a>
-
-                            <a href="404.html" class="btn btn-outline-light">
-
-                                <i class="bi bi-calendar-plus"></i>
-
-                                Book Appointment
-
-                            </a>
-
                         </div>
 
                     </div>
 
-                    <div class="welcome-image">
+                    <!--==========================================
+STATISTICS
+===========================================-->
 
-                        <i class="bi bi-bank2"></i>
+                    <div class="row g-4 mb-4">
 
-                    </div>
+                        <div class="col-xl-3 col-md-6">
 
-                </div>
+                            <div class="stats-card">
 
-                <!-- Statistics -->
+                                <div class="stats-icon">
 
-                <div class="row g-4 mt-1">
+                                    <i class="bi bi-folder2-open"></i>
 
-                    <div class="col-xl-3 col-lg-6">
+                                </div>
 
-                        <div class="stats-card">
+                                <div>
 
-                            <div class="stats-icon">
+                                    <h3>
 
-                                <i class="bi bi-folder-fill"></i>
+                                        4
 
-                            </div>
+                                    </h3>
 
-                            <div class="stats-content">
+                                    <p>
 
-                                <span>Total Cases</span>
+                                        My Cases
 
-                                <h3>08</h3>
+                                    </p>
 
-                                <small>
-
-                                    +2 This Month
-
-                                </small>
+                                </div>
 
                             </div>
 
                         </div>
 
-                    </div>
+                        <div class="col-xl-3 col-md-6">
 
-                    <div class="col-xl-3 col-lg-6">
+                            <div class="stats-card">
 
-                        <div class="stats-card">
+                                <div class="stats-icon">
 
-                            <div class="stats-icon blue">
+                                    <i class="bi bi-calendar-event"></i>
 
-                                <i class="bi bi-calendar-event-fill"></i>
+                                </div>
 
-                            </div>
+                                <div>
 
-                            <div class="stats-content">
+                                    <h3>
 
-                                <span>Appointments</span>
+                                        2
 
-                                <h3>05</h3>
+                                    </h3>
 
-                                <small>
+                                    <p>
 
-                                    Next Tomorrow
+                                        Hearings
 
-                                </small>
+                                    </p>
 
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-3 col-lg-6">
-
-                        <div class="stats-card">
-
-                            <div class="stats-icon green">
-
-                                <i class="bi bi-file-earmark-check-fill"></i>
-
-                            </div>
-
-                            <div class="stats-content">
-
-                                <span>Documents</span>
-
-                                <h3>16</h3>
-
-                                <small>
-
-                                    Updated Today
-
-                                </small>
+                                </div>
 
                             </div>
 
                         </div>
 
-                    </div>
+                        <div class="col-xl-3 col-md-6">
 
-                    <div class="col-xl-3 col-lg-6">
+                            <div class="stats-card">
 
-                        <div class="stats-card">
+                                <div class="stats-icon">
 
-                            <div class="stats-icon orange">
+                                    <i class="bi bi-file-earmark-text"></i>
 
-                                <i class="bi bi-chat-left-text-fill"></i>
+                                </div>
 
-                            </div>
+                                <div>
 
-                            <div class="stats-content">
+                                    <h3>
 
-                                <span>Messages</span>
+                                        18
 
-                                <h3>12</h3>
+                                    </h3>
 
-                                <small>
+                                    <p>
 
-                                    3 New Messages
+                                        Documents
 
-                                </small>
+                                    </p>
+
+                                </div>
 
                             </div>
 
                         </div>
 
-                    </div>
+                        <div class="col-xl-3 col-md-6">
 
-                </div>
+                            <div class="stats-card">
 
-                <!-- Quick Actions -->
+                                <div class="stats-icon">
 
-                <div class="dashboard-section mt-5">
+                                    <i class="bi bi-briefcase-fill"></i>
 
-                    <div class="section-title">
+                                </div>
 
-                        <h4>
+                                <div>
 
-                            Quick Actions
+                                    <h3>
 
-                        </h4>
+                                        1
+
+                                    </h3>
+
+                                    <p>
+
+                                        Assigned Lawyer
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
                     <div class="row g-4">
 
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-lg-8">
 
-                            <a href="client-my-case.html" class="quick-card">
+                            <div class="dashboard-card">
 
-                                <i class="bi bi-folder-plus"></i>
+                                <div class="dashboard-card-header">
 
-                                <h5>
+                                    <h5>
 
-                                    Create Case
+                                        My Active Cases
 
-                                </h5>
+                                    </h5>
 
-                                <p>
+                                    <a href="client-my-cases.html">
 
-                                    Submit a new legal request.
+                                        View All
 
-                                </p>
+                                    </a>
 
-                            </a>
+                                </div>
 
-                        </div>
+                                <div class="recent-case-item">
 
-                        <div class="col-xl-3 col-md-6">
+                                    <div>
 
-                            <a href="404.html" class="quick-card">
+                                        <h6>
 
-                                <i class="bi bi-calendar2-plus"></i>
+                                            Property Dispute
 
-                                <h5>
-
-                                    Appointment
-
-                                </h5>
-
-                                <p>
-
-                                    Schedule a consultation.
-
-                                </p>
-
-                            </a>
-
-                        </div>
-
-                        <div class="col-xl-3 col-md-6">
-
-                            <a href="404.html" class="quick-card">
-
-                                <i class="bi bi-upload"></i>
-
-                                <h5>
-
-                                    Upload Files
-
-                                </h5>
-
-                                <p>
-
-                                    Upload legal documents.
-
-                                </p>
-
-                            </a>
-
-                        </div>
-
-                        <div class="col-xl-3 col-md-6">
-
-                            <a href="404.html" class="quick-card">
-
-                                <i class="bi bi-chat-dots-fill"></i>
-
-                                <h5>
-
-                                    Chat
-
-                                </h5>
-
-                                <p>
-
-                                    Contact your legal advisor.
-
-                                </p>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Dashboard Grid -->
-
-                <div class="row g-4 mt-2">
-
-                    <!-- Recent Cases -->
-
-                    <div class="col-xl-8">
-
-                        <div class="dashboard-card">
-
-                            <div class="dashboard-card-header">
-
-                                <h4>
-
-                                    Recent Cases
-
-                                </h4>
-
-                                <a href="404.html">
-
-                                    View All
-
-                                </a>
-
-                            </div>
-
-                            <div class="table-responsive">
-
-                                <table class="table dashboard-table align-middle">
-
-                                    <thead>
-
-                                        <tr>
-
-                                            <th>Case ID</th>
-
-                                            <th>Case Name</th>
-
-                                            <th>Lawyer</th>
-
-                                            <th>Status</th>
-
-                                        </tr>
-
-                                    </thead>
-
-                                    <tbody>
-
-                                        <tr>
-
-                                            <td>#LC1001</td>
-
-                                            <td>Property Dispute</td>
-
-                                            <td>John David</td>
-
-                                            <td>
-
-                                                <span class="badge bg-warning">
-
-                                                    Pending
-
-                                                </span>
-
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-
-                                            <td>#LC1002</td>
-
-                                            <td>Family Settlement</td>
-
-                                            <td>Michael Roy</td>
-
-                                            <td>
-
-                                                <span class="badge bg-success">
-
-                                                    Completed
-
-                                                </span>
-
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-
-                                            <td>#LC1003</td>
-
-                                            <td>Business Registration</td>
-
-                                            <td>James William</td>
-
-                                            <td>
-
-                                                <span class="badge bg-primary">
-
-                                                    Processing
-
-                                                </span>
-
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-
-                                            <td>#LC1004</td>
-
-                                            <td>Employment Agreement</td>
-
-                                            <td>Emma Watson</td>
-
-                                            <td>
-
-                                                <span class="badge bg-danger">
-
-                                                    Review
-
-                                                </span>
-
-                                            </td>
-
-                                        </tr>
-
-                                    </tbody>
-
-                                </table>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Upcoming Appointments -->
-
-                    <div class="col-xl-4">
-
-                        <div class="dashboard-card">
-
-                            <div class="dashboard-card-header">
-
-                                <h4>
-
-                                    Upcoming
-
-                                </h4>
-
-                            </div>
-
-                            <div class="appointment-list">
-
-                                <div class="appointment-item">
-
-                                    <div class="appointment-date">
+                                        </h6>
 
                                         <span>
 
-                                            28
+                                            Case ID : LC-1024
 
                                         </span>
 
-                                        Jul
-
                                     </div>
+
+                                    <span class="case-status progress-status">
+
+                                        In Progress
+
+                                    </span>
+
+                                </div>
+
+                                <div class="recent-case-item">
 
                                     <div>
 
                                         <h6>
 
-                                            Property Consultation
+                                            Corporate Agreement
 
                                         </h6>
-
-                                        <small>
-
-                                            10:30 AM
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="appointment-item">
-
-                                    <div class="appointment-date">
 
                                         <span>
 
-                                            30
+                                            Case ID : LC-1051
 
                                         </span>
 
-                                        Jul
-
                                     </div>
+
+                                    <span class="case-status pending-status">
+
+                                        Pending
+
+                                    </span>
+
+                                </div>
+
+                                <div class="recent-case-item">
 
                                     <div>
 
                                         <h6>
 
-                                            Family Case Review
+                                            Family Settlement
 
                                         </h6>
-
-                                        <small>
-
-                                            02:00 PM
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="appointment-item">
-
-                                    <div class="appointment-date">
 
                                         <span>
 
-                                            03
+                                            Case ID : LC-1095
 
                                         </span>
 
-                                        Aug
-
                                     </div>
 
-                                    <div>
+                                    <span class="case-status complete-status">
+
+                                        Completed
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>
+
+                                        Upcoming Hearings
+
+                                    </h5>
+
+                                </div>
+
+                                <div class="hearing-item">
+
+                                    <strong>
+
+                                        High Court
+
+                                    </strong>
+
+                                    <span>
+
+                                        28 Jul • 10:30 AM
+
+                                    </span>
+
+                                </div>
+
+                                <div class="hearing-item">
+
+                                    <strong>
+
+                                        Civil Court
+
+                                    </strong>
+
+                                    <span>
+
+                                        03 Aug • 02:00 PM
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row g-4 mt-2">
+
+                        <div class="col-lg-4">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>
+
+                                        Assigned Lawyer
+
+                                    </h5>
+
+                                </div>
+
+                                <div class="recent-client-item">
+
+                                    <img src="assets/images/profile-1.webp" alt="">
+
+                                    <div class="client-info">
 
                                         <h6>
 
-                                            Contract Signing
+                                            David Miller
 
                                         </h6>
 
-                                        <small>
+                                        <span>
 
-                                            11:00 AM
+                                            Senior Corporate Lawyer
 
-                                        </small>
+                                        </span>
 
                                     </div>
 
@@ -689,230 +524,220 @@
 
                         </div>
 
+                        <div class="col-lg-4">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>
+
+                                        Recent Documents
+
+                                    </h5>
+
+                                </div>
+
+                                <div class="hearing-item">
+
+                                    <strong>
+
+                                        Agreement.pdf
+
+                                    </strong>
+
+                                    <span>
+
+                                        Uploaded Yesterday
+
+                                    </span>
+
+                                </div>
+
+                                <div class="hearing-item">
+
+                                    <strong>
+
+                                        Evidence.zip
+
+                                    </strong>
+
+                                    <span>
+
+                                        Uploaded 18 Jul
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>
+
+                                        Quick Actions
+
+                                    </h5>
+
+                                </div>
+
+                                <div class="quick-action-grid">
+
+                                    <a href="client-my-cases.html" class="quick-action-card">
+
+                                        <i class="bi bi-folder2-open"></i>
+
+                                        <span>
+
+                                            My Cases
+
+                                        </span>
+
+                                    </a>
+
+                                    <a href="client-documents.html" class="quick-action-card">
+
+                                        <i class="bi bi-file-earmark-text"></i>
+
+                                        <span>
+
+                                            Documents
+
+                                        </span>
+
+                                    </a>
+
+                                    <a href="client-lawyers.html" class="quick-action-card">
+
+                                        <i class="bi bi-briefcase-fill"></i>
+
+                                        <span>
+
+                                            Lawyer
+
+                                        </span>
+
+                                    </a>
+
+                                    <a href="client-profile.html" class="quick-action-card">
+
+                                        <i class="bi bi-person-circle"></i>
+
+                                        <span>
+
+                                            Profile
+
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
+
+                    <div class="dashboard-card mt-4">
+
+                        <div class="dashboard-card-header">
+
+                            <h5>
+
+                                Recent Activity
+
+                            </h5>
+
+                        </div>
+
+                        <div class="activity-timeline">
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+
+                                    <i class="bi bi-upload"></i>
+
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <h6>
+
+                                        Document Uploaded
+
+                                    </h6>
+
+                                    <p>
+
+                                        Your lawyer uploaded a new agreement document.
+
+                                    </p>
+
+                                </div>
+
+                                <span>
+
+                                    Today
+
+                                </span>
+
+                            </div>
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+
+                                    <i class="bi bi-calendar-check"></i>
+
+                                </div>
+
+                                <div class="activity-content">
+
+                                    <h6>
+
+                                        Hearing Scheduled
+
+                                    </h6>
+
+                                    <p>
+
+                                        A new hearing has been scheduled for your property dispute.
+
+                                    </p>
+
+                                </div>
+
+                                <span>
+
+                                    Yesterday
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
-                <!-- Bottom Grid -->
-
-                <div class="row g-4 mt-1">
-
-                    <!-- Recent Documents -->
-
-                    <div class="col-lg-6">
-
-                        <div class="dashboard-card">
-
-                            <div class="dashboard-card-header">
-
-                                <h4>
-
-                                    Recent Documents
-
-                                </h4>
-
-                            </div>
-
-                            <div class="document-list">
-
-                                <div class="document-item">
-
-                                    <i class="bi bi-file-earmark-pdf-fill"></i>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Property_Agreement.pdf
-
-                                        </h6>
-
-                                        <small>
-
-                                            Uploaded Today
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="document-item">
-
-                                    <i class="bi bi-file-earmark-word-fill"></i>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Client_Contract.docx
-
-                                        </h6>
-
-                                        <small>
-
-                                            Yesterday
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="document-item">
-
-                                    <i class="bi bi-file-earmark-text-fill"></i>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Legal_Notice.pdf
-
-                                        </h6>
-
-                                        <small>
-
-                                            2 Days Ago
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Activity Timeline -->
-
-                    <div class="col-lg-6">
-
-                        <div class="dashboard-card">
-
-                            <div class="dashboard-card-header">
-
-                                <h4>
-
-                                    Recent Activity
-
-                                </h4>
-
-                            </div>
-
-                            <div class="timeline">
-
-                                <div class="timeline-item">
-
-                                    <div class="timeline-dot"></div>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Appointment Confirmed
-
-                                        </h6>
-
-                                        <small>
-
-                                            10 Minutes Ago
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="timeline-item">
-
-                                    <div class="timeline-dot"></div>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Document Uploaded
-
-                                        </h6>
-
-                                        <small>
-
-                                            Today
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="timeline-item">
-
-                                    <div class="timeline-dot"></div>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Lawyer Assigned
-
-                                        </h6>
-
-                                        <small>
-
-                                            Yesterday
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="timeline-item">
-
-                                    <div class="timeline-dot"></div>
-
-                                    <div>
-
-                                        <h6>
-
-                                            Case Created
-
-                                        </h6>
-
-                                        <small>
-
-                                            3 Days Ago
-
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+            </section>
 
         </main>
 
     </div>
 
-    <!--- Client Dashboard End --->
-
-    <!--- Js Files --->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"> </script>
-
+    <script src="assets/js/dashboard.js"></script>
 </body>
 
 </html>

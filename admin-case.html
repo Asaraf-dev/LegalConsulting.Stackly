@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Consulting | About </title>
+    <title>Legal Consulting | Admin </title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -78,7 +78,7 @@
 
             <div class="dashboard-sidebar-footer">
 
-              <a href="login.html">  <button class="logout-btn">
+               <a href="login.html"> <button class="logout-btn">
 
                     <i class="bi bi-box-arrow-right"></i>
 
@@ -113,11 +113,11 @@
                     <div>
 
                         <h3 class="page-title">
-                            Lawyers
+                            Case
                         </h3>
 
                         <p class="page-subtitle">
-                            View, organize, and manage your legal team.
+                            monitor all legal cases efficiently.
                         </p>
 
                     </div>
@@ -160,18 +160,16 @@
 
                 <div class="dashboard-container">
 
-                    <!--- LAWYERS PAGE HEADER --->
+                    <!--- CASE PAGE HEADER --->
 
                     <div class="page-header">
 
                         <div>
 
-                            <h2>Lawyers</h2>
+                            <h2>All Cases</h2>
 
                             <p>
-
-                                Manage lawyer profiles, case assignments, and legal expertise efficiently.
-
+                                Manage and monitor all legal cases efficiently.
                             </p>
 
                         </div>
@@ -180,9 +178,9 @@
 
                             <a href="404.html" class="new-case-btn">
 
-                                <i class="bi bi-person-plus-fill"></i>
+                                <i class="bi bi-plus-lg"></i>
 
-                                <span>Add Lawyer</span>
+                                <span>New Case</span>
 
                             </a>
 
@@ -190,7 +188,7 @@
 
                     </div>
 
-                    <!--- LAWYER STATISTICS --->
+                    <!--- CASE STATISTICS --->
 
                     <div class="row g-4 mb-4">
 
@@ -200,59 +198,15 @@
 
                                 <div class="case-stat-icon">
 
-                                    <i class="bi bi-briefcase-fill"></i>
+                                    <i class="bi bi-folder2-open"></i>
 
                                 </div>
 
                                 <div>
 
-                                    <h3>48</h3>
+                                    <h3>248</h3>
 
-                                    <p>Total Lawyers</p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-3 col-md-6">
-
-                            <div class="case-stat-card">
-
-                                <div class="case-stat-icon success">
-
-                                    <i class="bi bi-person-check-fill"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <h3>42</h3>
-
-                                    <p>Active Lawyers</p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-3 col-md-6">
-
-                            <div class="case-stat-card">
-
-                                <div class="case-stat-icon primary">
-
-                                    <i class="bi bi-folder-check"></i>
-
-                                </div>
-
-                                <div>
-
-                                    <h3>156</h3>
-
-                                    <p>Active Cases</p>
+                                    <p>Total Cases</p>
 
                                 </div>
 
@@ -266,15 +220,59 @@
 
                                 <div class="case-stat-icon warning">
 
-                                    <i class="bi bi-award-fill"></i>
+                                    <i class="bi bi-hourglass-split"></i>
 
                                 </div>
 
                                 <div>
 
-                                    <h3>14</h3>
+                                    <h3>64</h3>
 
-                                    <p>Senior Partners</p>
+                                    <p>Pending</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="case-stat-card">
+
+                                <div class="case-stat-icon primary">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>121</h3>
+
+                                    <p>Progress</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="case-stat-card">
+
+                                <div class="case-stat-icon success">
+
+                                    <i class="bi bi-check-circle"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>63</h3>
+
+                                    <p>Completed</p>
 
                                 </div>
 
@@ -284,9 +282,9 @@
 
                     </div>
 
-                    <!--- LAWYER FILTER BAR --->
+                    <!--- FILTER BAR --->
 
-                    <div class="dashboard-card">
+                    <div class="dashboard-card mb-4">
 
                         <div class="row g-3 align-items-center">
 
@@ -297,7 +295,7 @@
                                     <i class="bi bi-search filter-search-icon"></i>
 
                                     <input type="search" class="form-control filter-input"
-                                        placeholder="Search by lawyer name..">
+                                        placeholder="Search by case ID...">
 
                                 </div>
 
@@ -307,33 +305,10 @@
 
                                 <select class="form-select filter-select">
 
-                                    <option>Specializa</option>
-
-                                    <option>Corporate Law</option>
-
-                                    <option>Family Law</option>
-
-                                    <option>Criminal Law</option>
-
-                                    <option>Property Law</option>
-
-                                    <option>Civil Law</option>
-
-                                </select>
-
-                            </div>
-
-                            <div class="col-xl-2 col-md-4">
-
-                                <select class="form-select filter-select">
-
                                     <option>Status</option>
-
-                                    <option>Available</option>
-
-                                    <option>Busy</option>
-
-                                    <option>On Leave</option>
+                                    <option>Pending</option>
+                                    <option>In Progress</option>
+                                    <option>Completed</option>
 
                                 </select>
 
@@ -343,13 +318,22 @@
 
                                 <select class="form-select filter-select">
 
-                                    <option>Experience</option>
+                                    <option>Priority</option>
+                                    <option>High</option>
+                                    <option>Medium</option>
+                                    <option>Low</option>
 
-                                    <option>1-5 Years</option>
+                                </select>
 
-                                    <option>5-10 Years</option>
+                            </div>
 
-                                    <option>10+ Years</option>
+                            <div class="col-xl-2 col-md-4">
+
+                                <select class="form-select filter-select">
+
+                                    <option>Lawyer</option>
+                                    <option>David Miller</option>
+                                    <option>James Carter</option>
 
                                 </select>
 
@@ -359,7 +343,7 @@
 
                                 <a href="404.html" class="filter-btn">
 
-                                    <i class="bi bi-funnel-fill"></i>
+                                    <i class="bi bi-funnel"></i>
 
                                     <span>Apply</span>
 
@@ -371,135 +355,119 @@
 
                     </div>
 
-                    <!--- LAWYER LIST --->
+                    <!--- CASE LIST --->
 
-                    <div class="row g-4 mt-1">
+                    <div class="row g-4">
 
-                        <!-- LAWYER CARD -->
+                        <!-- CASE CARD -->
 
                         <div class="col-xl-6">
 
-                            <div class="lawyer-card">
+                            <div class="case-card">
+                                <div class="case-body">
 
-                                <div class="lawyer-card-header">
-
-                                    <div class="lawyer-profile">
-
-                                        <img src="assets/images/profile-4.webp" alt="Lawyer">
+                                    <div class="case-card-header">
 
                                         <div>
 
-                                            <span class="lawyer-id">
+                                            <span class="case-id">
 
-                                                LW-1001
+                                                LC-1024
 
                                             </span>
 
                                             <h4>
 
-                                                David Miller
+                                                Corporate Agreement
 
                                             </h4>
 
-                                            <p>
+                                        </div>
 
-                                                Corporate Lawyer
+                                        <span class="case-status progress-status">
 
-                                            </p>
+                                            progress
+
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="case-client">
+
+                                        <img src="assets/images/profile-1.webp" alt="Client">
+
+                                        <div>
+
+                                            <h6>John Anderson</h6>
+
+                                            <span>Corporate Client</span>
 
                                         </div>
 
                                     </div>
 
-                                    <span class="lawyer-status available-status">
+                                    <div class="case-details">
 
-                                        Available
+                                        <div>
 
-                                    </span>
+                                            <i class="bi bi-person-workspace"></i>
 
+                                            <span>David Miller</span>
+
+                                        </div>
+
+                                        <div>
+
+                                            <i class="bi bi-calendar-event"></i>
+
+                                            <span>25 Jul 2026</span>
+
+                                        </div>
+
+                                        <div>
+
+                                            <i class="bi bi-folder2-open"></i>
+
+                                            <span>8 Document</span>
+
+                                        </div>
+
+                                        <div>
+
+                                            <i class="bi bi-chat-dots"></i>
+
+                                            <span>5 Notes</span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="case-progress">
+
+                                        <div class="progress-header">
+
+                                            <span>Case Progress</span>
+
+                                            <strong>72%</strong>
+
+                                        </div>
+
+                                        <div class="progress">
+
+                                            <div class="progress-bar bg-warning" style="width:72%"></div>
+
+                                        </div>
+
+                                    </div>
                                 </div>
 
-                                <div class="lawyer-info-grid">
-
-                                    <div>
-
-                                        <i class="bi bi-award"></i>
-
-                                        <span>
-
-                                            12 Years Experience
-
-                                        </span>
-
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-folder2-open"></i>
-
-                                        <span>
-
-                                            18 Active Cases
-
-                                        </span>
-
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-trophy"></i>
-
-                                        <span>
-
-                                            96% Success Rate
-
-                                        </span>
-
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-envelope"></i>
-
-                                        <span>
-
-                                            david@email.com
-
-                                        </span>
-
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-telephone"></i>
-
-                                        <span>
-
-                                            +91 98765 43210
-
-                                        </span>
-
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-geo-alt"></i>
-
-                                        <span>
-
-                                            Chennai
-
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="lawyer-card-footer">
+                                <div class="case-footer">
 
                                     <a href="404.html" class="btn btn-outline-dark">
 
-                                        View Profile
+                                        View Details
 
                                     </a>
 
@@ -511,7 +479,7 @@
 
                                     <a href="404.html" class="btn btn-primary">
 
-                                        Assign Case
+                                        Assign
 
                                     </a>
 
@@ -521,131 +489,114 @@
 
                         </div>
 
-                        <!-- LAWYER CARD -->
+                        <!-- Duplicate Card -->
 
                         <div class="col-xl-6">
 
-                            <div class="lawyer-card">
+                            <div class="case-card">
+                                <div class="case-body">
 
-                                <div class="lawyer-card-header">
-
-                                    <div class="lawyer-profile">
-
-                                        <img src="assets/images/profile-3.webp" alt="Lawyer">
+                                    <div class="case-card-header">
 
                                         <div>
 
-                                            <span class="lawyer-id">
+                                            <span class="case-id">
 
-                                                LW-1002
+                                                LC-1038
 
                                             </span>
 
                                             <h4>
 
-                                                James Carter
+                                                Property Dispute
 
                                             </h4>
 
-                                            <p>
+                                        </div>
 
-                                                Criminal Lawyer
+                                        <span class="case-status pending-status">
 
-                                            </p>
+                                            Pending
+
+                                        </span>
+
+                                    </div>
+
+                                    <div class="case-client">
+
+                                        <img src="assets/images/profile-3.webp" alt="Client">
+
+                                        <div>
+
+                                            <h6>Sarah Wilson</h6>
+
+                                            <span>Property Client</span>
 
                                         </div>
 
                                     </div>
 
-                                    <span class="lawyer-status busy-status">
+                                    <div class="case-details">
 
-                                        Busy
+                                        <div>
 
-                                    </span>
+                                            <i class="bi bi-person-workspace"></i>
 
-                                </div>
+                                            <span>James</span>
 
-                                <div class="lawyer-info-grid">
+                                        </div>
 
-                                    <div>
+                                        <div>
 
-                                        <i class="bi bi-award"></i>
+                                            <i class="bi bi-calendar-event"></i>
 
-                                        <span>
+                                            <span>28 Jul 2026</span>
 
-                                            9 Years Experience
+                                        </div>
 
-                                        </span>
+                                        <div>
 
-                                    </div>
+                                            <i class="bi bi-folder2-open"></i>
 
-                                    <div>
+                                            <span>3 Document</span>
 
-                                        <i class="bi bi-folder2-open"></i>
+                                        </div>
 
-                                        <span>
+                                        <div>
 
-                                            24 Active Cases
+                                            <i class="bi bi-chat-dots"></i>
 
-                                        </span>
+                                            <span>2 Notes</span>
 
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-trophy"></i>
-
-                                        <span>
-
-                                            92% Success Rate
-
-                                        </span>
+                                        </div>
 
                                     </div>
 
-                                    <div>
+                                    <div class="case-progress">
 
-                                        <i class="bi bi-envelope"></i>
+                                        <div class="progress-header">
 
-                                        <span>
+                                            <span>Case Progress</span>
 
-                                            james@email.com
+                                            <strong>35%</strong>
 
-                                        </span>
+                                        </div>
 
-                                    </div>
+                                        <div class="progress">
 
-                                    <div>
+                                            <div class="progress-bar bg-primary" style="width:35%"></div>
 
-                                        <i class="bi bi-telephone"></i>
-
-                                        <span>
-
-                                            +91 98765 65432
-
-                                        </span>
-
-                                    </div>
-
-                                    <div>
-
-                                        <i class="bi bi-geo-alt"></i>
-
-                                        <span>
-
-                                            Bengaluru
-
-                                        </span>
+                                        </div>
 
                                     </div>
 
                                 </div>
 
-                                <div class="lawyer-card-footer">
+                                <div class="case-footer">
 
                                     <a href="404.html" class="btn btn-outline-dark">
 
-                                        View Profile
+                                        View Details
 
                                     </a>
 
@@ -657,7 +608,7 @@
 
                                     <a href="404.html" class="btn btn-primary">
 
-                                        Assign Case
+                                        Assign
 
                                     </a>
 
@@ -668,7 +619,6 @@
                         </div>
 
                     </div>
-
 
 
 

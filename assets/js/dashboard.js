@@ -1,305 +1,163 @@
-/*==========================================
-    CLIENT DASHBOARD
-==========================================*/
-
 document.addEventListener("DOMContentLoaded", () => {
 
     /*==========================================
-        USER INFORMATION
+        USER DETAILS
     ==========================================*/
 
-    const userName =
-        localStorage.getItem("userName") ||
-        localStorage.getItem("registerName") ||
-        "Client";
+    const userName = document.getElementById("dashboardUserName");
+    const userEmail = document.getElementById("dashboardUserEmail");
+    const userProfile = document.getElementById("dashboardProfile");
 
-    const userEmail =
-        localStorage.getItem("userEmail") ||
-        localStorage.getItem("registerEmail") ||
-        "client@email.com";
+    const storedName = localStorage.getItem("userName");
+    const storedEmail = localStorage.getItem("userEmail");
+    const storedProfile = localStorage.getItem("userProfile");
 
-    const topUserName = document.getElementById("topUserName");
-    const welcomeUserName = document.getElementById("welcomeUserName");
-    const topUserEmail = document.getElementById("topUserEmail");
-
-    if (topUserName) {
-
-        topUserName.textContent = userName;
-
+    if (userName && storedName) {
+        userName.textContent = storedName;
     }
 
-    if (welcomeUserName) {
-
-        welcomeUserName.textContent = userName;
-
+    if (userEmail && storedEmail) {
+        userEmail.textContent = storedEmail;
     }
 
-    if (topUserEmail) {
-
-        topUserEmail.textContent = userEmail;
-
-    }
-
-    /*==========================================
-        PROFILE IMAGE
-    ==========================================*/
-
-    const profileImage = document.getElementById("profileImage");
-
-    const savedImage = localStorage.getItem("userProfile");
-
-    if (profileImage && savedImage) {
-
-        profileImage.src = savedImage;
-
+    if (userProfile && storedProfile) {
+        userProfile.src = storedProfile;
     }
 
     /*==========================================
         SIDEBAR TOGGLE
     ==========================================*/
 
-    const sidebar = document.querySelector(".dashboard-sidebar");
-
+    const sidebar = document.getElementById("dashboardSidebar");
     const sidebarToggle = document.querySelector(".sidebar-toggle");
+    const overlay = document.querySelector(".sidebar-overlay");
 
-    if (sidebarToggle) {
+    if (sidebar && sidebarToggle && overlay) {
 
         sidebarToggle.addEventListener("click", () => {
 
             sidebar.classList.toggle("show");
+            overlay.classList.toggle("show");
 
         });
 
-    }
-
-    /*==========================================
-        CLOSE SIDEBAR MOBILE
-    ==========================================*/
-
-    document.addEventListener("click", (event) => {
-
-        if (window.innerWidth > 1199) {
-
-            return;
-
-        }
-
-        if (
-
-            !sidebar.contains(event.target) &&
-
-            !sidebarToggle.contains(event.target)
-
-        ) {
+        overlay.addEventListener("click", () => {
 
             sidebar.classList.remove("show");
-
-        }
-
-    });
-
-    /*==========================================
-        ACTIVE MENU
-    ==========================================*/
-
-    const currentPage = window.location.pathname.split("/").pop() || "client-dashboard.html";
-
-    const menuLinks = document.querySelectorAll(".sidebar-menu li a");
-
-    menuLinks.forEach(link => {
-
-        const href = link.getAttribute("href");
-
-        link.parentElement.classList.remove("active");
-
-        if (href === currentPage) {
-
-            link.parentElement.classList.add("active");
-
-        }
-
-    });
-
-    /*==========================================
-        DARK MODE
-    ==========================================*/
-
-    const darkButton = document.querySelectorAll(".topbar-icon")[2];
-
-    if (darkButton) {
-
-        darkButton.addEventListener("click", () => {
-
-            document.body.classList.toggle("dark-mode");
-
-            localStorage.setItem(
-
-                "theme",
-
-                document.body.classList.contains("dark-mode")
-
-                    ? "dark"
-
-                    : "light"
-
-            );
+            overlay.classList.remove("show");
 
         });
 
     }
 
-    if (localStorage.getItem("theme") === "dark") {
-
-        document.body.classList.add("dark-mode");
-
-    }
-
     /*==========================================
-        LOGOUT
+        ACTIVE SIDEBAR MENU
     ==========================================*/
 
-    const logoutBtn = document.getElementById("logoutBtn");
+    const currentPage = window.location.pathname.split("/").pop().split("?")[0];
 
-    if (logoutBtn) {
+    document.querySelectorAll(".dashboard-menu a").forEach(link => {
 
-        logoutBtn.addEventListener("click", () => {
+        const href = link.getAttribute("href").split("?")[0];
 
-            localStorage.removeItem("userName");
+        link.classList.toggle("active", href === currentPage);
 
-            localStorage.removeItem("userEmail");
+    });
 
-            localStorage.removeItem("userRole");
+    /*==========================================
+PASSWORD VALIDATION
+==========================================*/
 
-            window.location.href = "login.html";
+    const form = document.getElementById("changePasswordForm");
+
+    if (form) {
+
+        const current = document.getElementById("currentPassword");
+
+        const password = document.getElementById("newPassword");
+
+        const confirm = document.getElementById("confirmPassword");
+
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&^#()[\]{}_\-+=]).{8,}$/;
+
+        form.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            let valid = true;
+
+            if (current.value.trim() === "") {
+
+                current.classList.add("is-invalid");
+
+                valid = false;
+
+            } else {
+
+                current.classList.remove("is-invalid");
+
+            }
+
+            if (!regex.test(password.value)) {
+
+                password.classList.add("is-invalid");
+
+                valid = false;
+
+            } else {
+
+                password.classList.remove("is-invalid");
+
+            }
+
+            if (confirm.value !== password.value || confirm.value === "") {
+
+                confirm.classList.add("is-invalid");
+
+                valid = false;
+
+            } else {
+
+                confirm.classList.remove("is-invalid");
+
+            }
+
+            if (valid) {
+
+                alert("Password updated successfully.");
+
+                form.reset();
+
+            }
+
+        });
+
+        document.querySelectorAll(".password-toggle").forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                const input = this.previousElementSibling;
+
+                const icon = this.querySelector("i");
+
+                if (input.type === "password") {
+
+                    input.type = "text";
+
+                    icon.classList.replace("bi-eye", "bi-eye-slash");
+
+                } else {
+
+                    input.type = "password";
+
+                    icon.classList.replace("bi-eye-slash", "bi-eye");
+
+                }
+
+            });
 
         });
 
     }
 
 });
-
-/*==========================================
-    REVENUE CHART
-==========================================*/
-
-const revenueChart = document.getElementById("revenueChart");
-
-if (revenueChart) {
-
-    new Chart(revenueChart, {
-
-        type: "line",
-
-        data: {
-
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-
-            datasets: [{
-
-                label: "Revenue",
-
-                data: [120, 180, 160, 240, 210, 280, 320, 300, 350, 390, 430, 470],
-
-                borderColor: "#B68D40",
-
-                backgroundColor: "rgba(182,141,64,.12)",
-
-                fill: true,
-
-                tension: .4,
-
-                pointRadius: 5,
-
-                pointHoverRadius: 7
-
-            }]
-
-        },
-
-        options: {
-
-            responsive: true,
-
-            maintainAspectRatio: false,
-
-            plugins: {
-
-                legend: { display: false }
-
-            },
-
-            scales: {
-
-                x: { grid: { display: false } },
-
-                y: { beginAtZero: true }
-
-            }
-
-        }
-
-    });
-
-}
-
-/*==========================================
-    CASE STATUS CHART
-==========================================*/
-
-const caseChart = document.getElementById("caseStatusChart");
-
-if (caseChart) {
-
-    new Chart(caseChart, {
-
-        type: "doughnut",
-
-        data: {
-
-            labels: ["Active", "Pending", "Closed", "Review"],
-
-            datasets: [{
-
-                data: [48, 22, 18, 12],
-
-                backgroundColor: [
-
-                    "#16A34A",
-
-                    "#F59E0B",
-
-                    "#2563EB",
-
-                    "#DC2626"
-
-                ],
-
-                borderWidth: 0
-
-            }]
-
-        },
-
-        options: {
-
-            responsive: true,
-
-            maintainAspectRatio: false,
-
-            plugins: {
-
-                legend: {
-
-                    position: "bottom"
-
-                }
-
-            },
-
-            cutout: "70%"
-
-        }
-
-    });
-
-}

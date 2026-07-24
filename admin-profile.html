@@ -1,83 +1,150 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Consulting | Admin</title>
+    <title>Legal Consulting | About </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main favicon -->
     <link rel="icon" href="favicon.ico">
+
+    <!-- webp favicons -->
     <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.webp">
     <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.webp">
+
+    <!-- Apple -->
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.webp">
+
+    <!-- Android -->
     <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.webp">
     <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.webp">
+
+    <!-- Manifest -->
     <link rel="manifest" href="assets/images/site.webmanifest">
+
+    <!--- Icon Code --->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="stylesheet" href="assets/css/dashboard.css">
+
 </head>
 
 <body>
 
-    <!--- Admin Dashboard Start --->
-
     <div class="dashboard-wrapper">
 
-        <aside class="dashboard-sidebar">
+        <!-- Sidebar -->
 
-            <div class="sidebar-logo">
+        <!--- DASHBOARD SIDEBAR --->
 
-                <div class="sidebar-logo">
-                    <a href="index.html"> <img src="assets/images/barnd-logo-1.webp" alt="Brand-Logo"></a>
-                </div>
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+            <!-- Logo -->
+
+            <div class="dashboard-logo">
+
+                <a href="index.html">
+
+                    <img src="assets/images/barnd-logo-1.webp" alt="Logo">
+
+                </a>
 
             </div>
 
-            <ul class="sidebar-menu">
-                <li><a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a></li>
-                <li><a href="admin-cases.html"><i class="bi bi-folder-fill"></i><span>Cases</span></a></li>
-                <li><a href="admin-clients.html"><i class="bi bi-people-fill"></i><span>Clients</span></a></li>
-                <li><a href="admin-lawyers.html"><i class="bi bi-person-workspace"></i><span>Lawyers</span></a></li>
-                <li><a href="admin-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
-            </ul>
+            <!-- Navigation -->
 
-            <div class="sidebar-logout">
-                <button id="logoutBtn">
+            <nav class="dashboard-nav">
+
+                <ul class="dashboard-menu">
+
+                    <li><a href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a></li>
+                    <li><a href="admin-case.html"><i class="bi bi-folder2-open"></i><span>Cases</span></a></li>
+                    <li><a href="admin-clients.html"><i class="bi bi-people-fill"></i><span>Clients</span></a></li>
+                    <li><a href="admin-lawyers.html"><i class="bi bi-briefcase-fill"></i><span>Lawyers</span></a></li>
+                    <li><a href="admin-profile.html"><i class="bi bi-person-circle"></i><span>Profile</span></a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Logout -->
+
+            <div class="dashboard-sidebar-footer">
+
+               <a href="login.html"> <button class="logout-btn">
+
                     <i class="bi bi-box-arrow-right"></i>
-                    Logout
-                </button>
+
+                    <span>Logout</span>
+
+                </button> </a>
+
             </div>
 
         </aside>
 
+        <!-- Mobile Overlay -->
+
+        <div class="sidebar-overlay"></div>
+
+        <!-- Main -->
+
         <main class="dashboard-main">
+
+            <!-- Topbar -->
 
             <header class="dashboard-topbar">
 
                 <div class="topbar-left">
+
                     <button class="sidebar-toggle">
+
                         <i class="bi bi-list"></i>
+
                     </button>
-                    <h4 id="pageTitle">Admin</h4>
+
+                    <div>
+
+                        <h3 class="page-title">
+                            Profile
+                        </h3>
+
+                        <p class="page-subtitle">
+                            Manage your profile details and settings.
+                        </p>
+
+                    </div>
+
                 </div>
 
                 <div class="topbar-right">
 
-                    <button class="topbar-icon">
-                        <i class="bi bi-bell-fill"></i>
-                    </button>
+                    <div class="topbar-user">
 
-                    <div class="topbar-profile">
+                        <div class="user-details">
 
-                        <div class="profile-avatar">
-                            <img src="assets/images/profile-2.webp" id="profileImage" alt="Admin">
+                            <h6 id="dashboardUserName">
+
+                                Administrator
+
+                            </h6>
+
+                            <small id="dashboardUserEmail">
+
+                                admin@email.com
+
+                            </small>
+
                         </div>
 
-                        <div class="profile-content">
-                            <h6 id="topUserName">Administrator</h6>
-                            <small id="topUserEmail">admin@email.com</small>
-                        </div>
+                        <img id="dashboardProfile" src="assets/images/profile-1.webp" alt="Profile">
 
                     </div>
 
@@ -85,22 +152,552 @@
 
             </header>
 
-            <!--- Dashboard Content --->
+            <!-- Content -->
 
-            <div class="dashboard-content">
-               
-                
-            </div>
+            <!--- DASHBOARD CONTENT --->
+
+            <section class="dashboard-content">
+
+                <div class="dashboard-container">
+
+                    <!--- PROFILE PAGE HEADER --->
+
+                    <div class="page-header">
+
+                        <div>
+
+                            <h2>Profile</h2>
+
+                            <p>
+
+                                Manage your personal information, account security, and profile settings efficiently.
+
+                            </p>
+
+                        </div>
+
+                        <div class="page-header-actions">
+
+                            <a href="404.html" class="new-case-btn">
+
+                                <i class="bi bi-pencil-square"></i>
+
+                                <span>Edit Profile</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!--- PROFILE SUMMARY --->
+
+                    <div class="dashboard-card profile-summary-card mb-4">
+
+                        <div class="profile-summary-left">
+
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+
+                            <div>
+
+                                <span class="profile-role">
+
+                                    Administrator
+
+                                </span>
+
+                                <h3>
+
+                                    David Miller
+
+                                </h3>
+
+                                <p>
+
+                                    Senior Legal Consultant
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="profile-summary-right">
+
+                            <div class="profile-stat">
+
+                                <h4>248</h4>
+
+                                <span>Cases</span>
+
+                            </div>
+
+                            <div class="profile-stat">
+
+                                <h4>186</h4>
+
+                                <span>Clients</span>
+
+                            </div>
+
+                            <div class="profile-stat">
+
+                                <h4>12</h4>
+
+                                <span>Years</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--- PROFILE DETAILS --->
+
+                    <div class="row g-4">
+
+                        <!-- PERSONAL INFORMATION -->
+
+                        <div class="col-lg-6">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Personal Information</h5>
+
+                                </div>
+
+                                <div class="profile-info-list">
+
+                                    <div class="profile-info-item">
+
+                                        <span>Full Name</span>
+
+                                        <strong>David Miller</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Email</span>
+
+                                        <strong>david@email.com</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Phone</span>
+
+                                        <strong>+91 98765 43210</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Location</span>
+
+                                        <strong>Chennai, India</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Date of Birth</span>
+
+                                        <strong>15 May 1990</strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ACCOUNT INFORMATION -->
+
+                        <div class="col-lg-6">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Account Information</h5>
+
+                                </div>
+
+                                <div class="profile-info-list">
+
+                                    <div class="profile-info-item">
+
+                                        <span>Role</span>
+
+                                        <strong>Administrator</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Username</span>
+
+                                        <strong>davidmiller</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Member Since</span>
+
+                                        <strong>January 2020</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Last Login</span>
+
+                                        <strong>Today, 09:20 AM</strong>
+
+                                    </div>
+
+                                    <div class="profile-info-item">
+
+                                        <span>Account Status</span>
+
+                                        <strong class="text-success">
+
+                                            Active
+
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--- SECURITY SETTINGS --->
+
+                    <div class="row g-4 mt-1">
+
+                        <div class="col-12">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Security Settings</h5>
+
+                                </div>
+
+                                <form id="changePasswordForm" novalidate>
+
+                                    <div class="row g-4">
+
+                                        <div class="col-lg-4">
+
+                                            <label class="form-label">
+
+                                                Current Password
+
+                                            </label>
+
+                                            <div class="password-wrapper">
+
+                                                <input type="password" class="form-control password-field"
+                                                    id="currentPassword" required>
+
+                                                <button type="button" class="password-toggle">
+
+                                                    <i class="bi bi-eye"></i>
+
+                                                </button>
+
+                                            </div>
+
+                                            <div class="invalid-feedback">
+
+                                                Please enter your current password.
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4">
+
+                                            <label class="form-label">
+
+                                                New Password
+
+                                            </label>
+
+                                            <div class="password-wrapper">
+
+                                                <input type="password" class="form-control password-field"
+                                                    id="newPassword" required>
+
+                                                <button type="button" class="password-toggle">
+
+                                                    <i class="bi bi-eye"></i>
+
+                                                </button>
+
+                                            </div>
+
+                                            <div class="invalid-feedback">
+
+                                                Password does not meet the required format.
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4">
+
+                                            <label class="form-label">
+
+                                                Confirm Password
+
+                                            </label>
+
+                                            <div class="password-wrapper">
+
+                                                <input type="password" class="form-control password-field"
+                                                    id="confirmPassword" required>
+
+                                                <button type="button" class="password-toggle">
+
+                                                    <i class="bi bi-eye"></i>
+
+                                                </button>
+
+                                            </div>
+
+                                            <div class="invalid-feedback">
+
+                                                Passwords do not match.
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="password-rules mt-4">
+
+                                        <h6>Password Requirements</h6>
+
+                                        <ul>
+
+                                            <li>Minimum 8 characters</li>
+
+                                            <li>At least 1 uppercase letter</li>
+
+                                            <li>At least 1 lowercase letter</li>
+
+                                            <li>At least 1 number</li>
+
+                                            <li>At least 1 special character</li>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="mt-4">
+
+                                        <button type="submit" class="btn btn-primary">
+
+                                            Update Password
+
+                                        </button>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--==========================================
+    RECENT LOGIN ACTIVITY
+===========================================-->
+
+                    <div class="row g-4 mt-1">
+
+                        <div class="col-12">
+
+                            <div class="dashboard-card">
+
+                                <div class="dashboard-card-header">
+
+                                    <h5>Recent Login Activity</h5>
+
+                                    <a href="404.html">
+
+                                        View All
+
+                                    </a>
+
+                                </div>
+
+                                <div class="login-activity">
+
+                                    <div class="login-item">
+
+                                        <div class="login-icon success">
+
+                                            <i class="bi bi-laptop"></i>
+
+                                        </div>
+
+                                        <div class="login-content">
+
+                                            <h6>
+
+                                                Windows • Chrome
+
+                                            </h6>
+
+                                            <p>
+
+                                                Chennai, Tamil Nadu
+
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+
+                                            Today, 09:20 AM
+
+                                        </span>
+
+                                    </div>
+
+                                    <div class="login-item">
+
+                                        <div class="login-icon primary">
+
+                                            <i class="bi bi-phone"></i>
+
+                                        </div>
+
+                                        <div class="login-content">
+
+                                            <h6>
+
+                                                Android • Chrome
+
+                                            </h6>
+
+                                            <p>
+
+                                                Chennai, Tamil Nadu
+
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+
+                                            Yesterday
+
+                                        </span>
+
+                                    </div>
+
+                                    <div class="login-item">
+
+                                        <div class="login-icon warning">
+
+                                            <i class="bi bi-tablet"></i>
+
+                                        </div>
+
+                                        <div class="login-content">
+
+                                            <h6>
+
+                                                iPad • Safari
+
+                                            </h6>
+
+                                            <p>
+
+                                                Bengaluru, Karnataka
+
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+
+                                            18 Jul 2026
+
+                                        </span>
+
+                                    </div>
+
+                                    <div class="login-item">
+
+                                        <div class="login-icon danger">
+
+                                            <i class="bi bi-shield-lock"></i>
+
+                                        </div>
+
+                                        <div class="login-content">
+
+                                            <h6>
+
+                                                Password Changed
+
+                                            </h6>
+
+                                            <p>
+
+                                                Security settings updated successfully.
+
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+
+                                            10 Jul 2026
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </section>
 
         </main>
 
     </div>
 
-    <!--- Admin Dashboard End --->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/dashboard.js"></script>
-
 </body>
 
 </html>
