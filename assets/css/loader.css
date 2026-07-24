@@ -531,10 +531,6 @@
 
 }
 
-html.loading,
-body.loading {
-    overflow: hidden;
-}
 
 body.loading {
     background: #0F172A;
