@@ -110,6 +110,11 @@ body{
     color:var(--primary-color);
 }
 
+@media (max-width:575px) {
+    .ind-404-title{
+        font-size: 35px !important;
+    }
+}
 /*--- DESCRIPTION ---*/
 
 .ind-404-description{
@@ -243,11 +248,11 @@ body{
 @media (max-width:991.98px){
 
     .ind-404-section{
-        padding:90px 0;
+        padding:5px 0;
     }
 
     .ind-404-wrapper{
-        padding:60px 35px;
+        padding:30px 35px;
     }
 
     .ind-404-number span{
@@ -264,6 +269,9 @@ body{
     .ind-404-links{
         margin-bottom:50px;
     }
+      .ind-404-buttons{
+        margin-bottom:30px;
+    }
 
 }
 
@@ -272,11 +280,11 @@ body{
 @media (max-width:767.98px){
 
     .ind-404-section{
-        padding:70px 0;
+        padding:30px 0;
     }
 
     .ind-404-wrapper{
-        padding:50px 25px;
+        padding:30px 25px;
         border-radius:24px;
     }
 
@@ -299,7 +307,7 @@ body{
     }
 
     .ind-404-description{
-        margin-bottom:35px;
+        margin-bottom:12px;
     }
 
     .ind-404-buttons{
@@ -345,7 +353,7 @@ body{
 @media (max-width:575.98px){
 
     .ind-404-wrapper{
-        padding:40px 20px;
+        padding:30px 20px;
     }
 
     .ind-404-number span{
@@ -377,9 +385,17 @@ body{
         font-size:1.4rem;
     }
 
-    .ind-404-quote i{
-        font-size:2.2rem;
+    .ind-404-section{
+        padding: 5;
     }
+    .ind-404-buttons{
+        margin-bottom: 0px;
+    }
+    .ind-404-icon{
+        width: 50px;
+        height: 50px;
+    }
+
 
 }
 
